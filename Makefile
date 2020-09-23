@@ -210,6 +210,7 @@ Makefile: FdogQtStyleSheetSuper.pro ..\..\QT\5.10.0\msvc2015_64\mkspecs\win32-ms
 		..\..\QT\5.10.0\msvc2015_64\mkspecs\features\qt_config.prf \
 		..\..\QT\5.10.0\msvc2015_64\mkspecs\win32-msvc\qmake.conf \
 		..\..\QT\5.10.0\msvc2015_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		..\..\QT\5.10.0\msvc2015_64\mkspecs\features\exclusive_builds.prf \
 		..\..\QT\5.10.0\msvc2015_64\mkspecs\common\msvc-version.conf \
 		..\..\QT\5.10.0\msvc2015_64\mkspecs\features\toolchain.prf \
@@ -374,6 +375,7 @@ Makefile: FdogQtStyleSheetSuper.pro ..\..\QT\5.10.0\msvc2015_64\mkspecs\win32-ms
 ..\..\QT\5.10.0\msvc2015_64\mkspecs\features\qt_config.prf:
 ..\..\QT\5.10.0\msvc2015_64\mkspecs\win32-msvc\qmake.conf:
 ..\..\QT\5.10.0\msvc2015_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 ..\..\QT\5.10.0\msvc2015_64\mkspecs\features\exclusive_builds.prf:
 ..\..\QT\5.10.0\msvc2015_64\mkspecs\common\msvc-version.conf:
 ..\..\QT\5.10.0\msvc2015_64\mkspecs\features\toolchain.prf:
