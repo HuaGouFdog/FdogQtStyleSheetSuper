@@ -1,12 +1,18 @@
 ﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include<QDebug>
+#include<QPoint>
+#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::FramelessWindowHint);
+    ui->statusBar->showMessage(tr("欢迎使用皮肤生成器     作者：花狗Fdog  QQ：2506897252"));
+    ui->statusBar->setStyleSheet("color: rgb(226, 226, 226);");
 }
 
 MainWindow::~MainWindow()
@@ -34,4 +40,71 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 {
     //isok = false;
     Q_UNUSED(event);
+}
+
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    if(iswiedet_1==true)
+    {
+        ui->widget_2->setVisible(false);
+        iswiedet_1=false;
+        ui->pushButton_5->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+        return;
+    }
+    ui->widget_2->setVisible(true);
+    iswiedet_1=true;
+    ui->pushButton_5->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+}
+void MainWindow::on_pushButton_6_clicked()
+{
+    if(iswiedet_2==true)
+    {
+        ui->widget_3->setVisible(false);
+        iswiedet_2=false;
+        ui->pushButton_6->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+        return;
+    }
+    ui->widget_3->setVisible(true);
+    iswiedet_2=true;
+    ui->pushButton_6->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    if(iswiedet_3==true)
+    {
+        ui->widget_4->setVisible(false);
+        iswiedet_3=false;
+        ui->pushButton_7->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+        return;
+    }
+    ui->widget_4->setVisible(true);
+    iswiedet_3=true;
+    ui->pushButton_7->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+}
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    if(iswiedet_4==true)
+    {
+        ui->widget_5->setVisible(false);
+        iswiedet_4=false;
+        ui->pushButton_8->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+        return;
+    }
+    ui->widget_5->setVisible(true);
+    iswiedet_4=true;
+    ui->pushButton_8->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+}
+
+
+void MainWindow::on_pushButton_10_clicked()
+{
+    ui->widget_6->setVisible(false);
+}
+
+void MainWindow::on_pushButton_11_clicked()
+{
+    ui->widget_7->setVisible(false);
 }
