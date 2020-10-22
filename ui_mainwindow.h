@@ -16,7 +16,6 @@
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFontComboBox>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -26,6 +25,7 @@
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
+#include <QtWidgets/QSplitter>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
@@ -52,9 +52,6 @@ public:
     QSpacerItem *horizontalSpacer_4;
     QPushButton *pushButton_3;
     QSpacerItem *horizontalSpacer_2;
-    QGroupBox *groupBox;
-    QTextEdit *textEdit;
-    QGroupBox *groupBox_2;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QVBoxLayout *verticalLayout;
@@ -75,7 +72,6 @@ public:
     QPushButton *pushButton_6;
     QWidget *widget_3;
     QGridLayout *gridLayout_2;
-    QSpacerItem *horizontalSpacer_10;
     QFontComboBox *fontComboBox;
     QComboBox *comboBox;
     QComboBox *comboBox_5;
@@ -94,6 +90,7 @@ public:
     QComboBox *comboBox_2;
     QComboBox *comboBox_3;
     QComboBox *comboBox_4;
+    QSpacerItem *horizontalSpacer_10;
     QPushButton *pushButton_7;
     QWidget *widget_4;
     QGridLayout *gridLayout_3;
@@ -132,6 +129,35 @@ public:
     QWidget *widget_8;
     QLabel *label_2;
     QLabel *label_4;
+    QScrollArea *scrollArea_2;
+    QWidget *scrollAreaWidgetContents_2;
+    QSplitter *splitter;
+    QTextEdit *textEdit;
+    QWidget *widget_9;
+    QGridLayout *gridLayout_5;
+    QPushButton *pushButton_12;
+    QPushButton *pushButton_30;
+    QLabel *label_26;
+    QSpacerItem *verticalSpacer_3;
+    QScrollArea *scrollArea_3;
+    QWidget *scrollAreaWidgetContents_4;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *pushButton_16;
+    QPushButton *pushButton_17;
+    QPushButton *pushButton_18;
+    QPushButton *pushButton_19;
+    QPushButton *pushButton_20;
+    QPushButton *pushButton_21;
+    QPushButton *pushButton_22;
+    QPushButton *pushButton_29;
+    QPushButton *pushButton_28;
+    QPushButton *pushButton_27;
+    QPushButton *pushButton_26;
+    QPushButton *pushButton_25;
+    QPushButton *pushButton_24;
+    QPushButton *pushButton_23;
+    QScrollArea *scrollArea_4;
+    QWidget *scrollAreaWidgetContents_5;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -209,8 +235,8 @@ public:
 
         pushButton_4 = new QPushButton(widget);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setMinimumSize(QSize(20, 20));
-        pushButton_4->setMaximumSize(QSize(20, 20));
+        pushButton_4->setMinimumSize(QSize(18, 18));
+        pushButton_4->setMaximumSize(QSize(18, 18));
         pushButton_4->setStyleSheet(QStringLiteral("border-image: url(:/lib/xuanxiang.png);"));
 
         horizontalLayout_2->addWidget(pushButton_4);
@@ -221,8 +247,8 @@ public:
 
         pushButton = new QPushButton(widget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setMinimumSize(QSize(20, 20));
-        pushButton->setMaximumSize(QSize(20, 20));
+        pushButton->setMinimumSize(QSize(18, 18));
+        pushButton->setMaximumSize(QSize(18, 18));
         pushButton->setStyleSheet(QStringLiteral("border-image: url(:/lib/zuixiao.png);"));
 
         horizontalLayout_2->addWidget(pushButton);
@@ -233,8 +259,8 @@ public:
 
         pushButton_2 = new QPushButton(widget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setMinimumSize(QSize(20, 20));
-        pushButton_2->setMaximumSize(QSize(20, 20));
+        pushButton_2->setMinimumSize(QSize(18, 18));
+        pushButton_2->setMaximumSize(QSize(18, 18));
         pushButton_2->setStyleSheet(QStringLiteral("border-image: url(:/lib/zuidahua.png);"));
 
         horizontalLayout_2->addWidget(pushButton_2);
@@ -245,42 +271,25 @@ public:
 
         pushButton_3 = new QPushButton(widget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setMinimumSize(QSize(20, 20));
-        pushButton_3->setMaximumSize(QSize(20, 20));
+        pushButton_3->setMinimumSize(QSize(18, 18));
+        pushButton_3->setMaximumSize(QSize(18, 18));
         pushButton_3->setStyleSheet(QStringLiteral("border-image: url(:/lib/guanbi.png);"));
 
         horizontalLayout_2->addWidget(pushButton_3);
 
-        horizontalSpacer_2 = new QSpacerItem(10, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
+        horizontalSpacer_2 = new QSpacerItem(0, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
 
         horizontalLayout_2->addItem(horizontalSpacer_2);
 
-        groupBox = new QGroupBox(centralWidget);
-        groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(230, 30, 521, 371));
-        groupBox->setStyleSheet(QStringLiteral("color: rgb(255, 255, 255);"));
-        textEdit = new QTextEdit(groupBox);
-        textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setGeometry(QRect(10, 20, 501, 341));
-        QFont font2;
-        font2.setFamily(QStringLiteral("ADMUI3Lg"));
-        font2.setPointSize(11);
-        font2.setBold(true);
-        font2.setWeight(75);
-        textEdit->setFont(font2);
-        textEdit->setStyleSheet(QStringLiteral("color:rgb(255, 0, 0)"));
-        groupBox_2 = new QGroupBox(centralWidget);
-        groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(230, 410, 511, 311));
-        groupBox_2->setStyleSheet(QStringLiteral("color: rgb(255, 255, 255);"));
         scrollArea = new QScrollArea(centralWidget);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
-        scrollArea->setGeometry(QRect(0, 31, 212, 721));
-        QFont font3;
-        font3.setBold(false);
-        font3.setWeight(50);
-        scrollArea->setFont(font3);
+        scrollArea->setGeometry(QRect(0, 31, 212, 701));
+        QFont font2;
+        font2.setBold(false);
+        font2.setWeight(50);
+        scrollArea->setFont(font2);
         scrollArea->setStyleSheet(QStringLiteral("background-color: rgba(255, 255, 255, 0);"));
+        scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
@@ -288,6 +297,37 @@ public:
         scrollAreaWidgetContents->setStyleSheet(QLatin1String("#scrollAreaWidgetContents\n"
 "{\n"
 "background-color: rgb(74, 74, 74);\n"
+"}\n"
+"QComboBox\n"
+"{\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"border-color:rgba(0,0,0,255);\n"
+"border-style:solid;\n"
+"border-width:1px;\n"
+"border-radius:3px;\n"
+"font:15px \"80\";\n"
+"}\n"
+"QSpinBox\n"
+"{\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"border-color:rgba(0,0,0,255);\n"
+"border-style:solid;\n"
+"border-width:1px;\n"
+"border-radius:3px;\n"
+"font:15px \"80\";\n"
+"}\n"
+"\n"
+"QFontComboBox\n"
+"{\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"border-color:rgba(0,0,0,255);\n"
+"border-style:solid;\n"
+"border-width:1px;\n"
+"border-radius:3px;\n"
+"font:15px \"80\";\n"
 "}"));
         verticalLayout = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout->setSpacing(1);
@@ -299,10 +339,10 @@ public:
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
         pushButton_5->setMinimumSize(QSize(225, 20));
         pushButton_5->setMaximumSize(QSize(132, 16777215));
-        QFont font4;
-        font4.setBold(true);
-        font4.setWeight(75);
-        pushButton_5->setFont(font4);
+        QFont font3;
+        font3.setBold(true);
+        font3.setWeight(75);
+        pushButton_5->setFont(font3);
         pushButton_5->setStyleSheet(QLatin1String("background-color: rgb(120, 120, 120);\n"
 "border-image: url(:/lib/zhankai.png);\n"
 "border-style:solid;\n"
@@ -323,7 +363,7 @@ public:
         gridLayout->setContentsMargins(-1, 0, -1, 0);
         label_5 = new QLabel(widget_2);
         label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setFont(font4);
+        label_5->setFont(font3);
 
         gridLayout->addWidget(label_5, 0, 0, 1, 1);
 
@@ -331,11 +371,11 @@ public:
         lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
         lineEdit_3->setMinimumSize(QSize(65, 23));
         lineEdit_3->setMaximumSize(QSize(65, 16777215));
-        QFont font5;
-        font5.setPointSize(10);
-        font5.setBold(true);
-        font5.setWeight(75);
-        lineEdit_3->setFont(font5);
+        QFont font4;
+        font4.setPointSize(10);
+        font4.setBold(true);
+        font4.setWeight(75);
+        lineEdit_3->setFont(font4);
         lineEdit_3->setStyleSheet(QLatin1String("color: rgb(204, 204, 204);\n"
 "background-color: rgba(255, 255, 255, 0);\n"
 "border-style:solid;\n"
@@ -349,7 +389,7 @@ public:
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
         lineEdit_2->setMinimumSize(QSize(65, 23));
         lineEdit_2->setMaximumSize(QSize(65, 16777215));
-        lineEdit_2->setFont(font5);
+        lineEdit_2->setFont(font4);
         lineEdit_2->setStyleSheet(QLatin1String("color: rgb(204, 204, 204);\n"
 "background-color: rgba(255, 255, 255, 0);\n"
 "border-style:solid;\n"
@@ -383,7 +423,7 @@ public:
 
         label_6 = new QLabel(widget_2);
         label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setFont(font4);
+        label_6->setFont(font3);
 
         gridLayout->addWidget(label_6, 1, 0, 1, 1);
 
@@ -391,7 +431,7 @@ public:
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
         lineEdit->setMinimumSize(QSize(65, 23));
         lineEdit->setMaximumSize(QSize(65, 16777215));
-        lineEdit->setFont(font5);
+        lineEdit->setFont(font4);
         lineEdit->setStyleSheet(QLatin1String("color: rgb(204, 204, 204);\n"
 "background-color: rgba(255, 255, 255, 0);\n"
 "border-style:solid;\n"
@@ -403,7 +443,7 @@ public:
 
         label_7 = new QLabel(widget_2);
         label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setFont(font4);
+        label_7->setFont(font3);
 
         gridLayout->addWidget(label_7, 2, 0, 1, 1);
 
@@ -426,7 +466,7 @@ public:
         pushButton_6 = new QPushButton(scrollAreaWidgetContents);
         pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
         pushButton_6->setMinimumSize(QSize(225, 20));
-        pushButton_6->setFont(font4);
+        pushButton_6->setFont(font3);
         pushButton_6->setStyleSheet(QLatin1String("border-style:solid;\n"
 "background-color: rgb(120, 120, 120);\n"
 "border-image: url(:/lib/zhankai.png);\n"
@@ -446,15 +486,16 @@ public:
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         gridLayout_2->setHorizontalSpacing(6);
         gridLayout_2->setContentsMargins(9, 0, -1, 0);
-        horizontalSpacer_10 = new QSpacerItem(31, 20, QSizePolicy::Minimum, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_10, 7, 3, 1, 1);
-
         fontComboBox = new QFontComboBox(widget_3);
         fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
         fontComboBox->setMinimumSize(QSize(107, 23));
-        fontComboBox->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);"));
+        fontComboBox->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"border-color:rgba(0,0,0,255);\n"
+"border-style:solid;\n"
+"border-width:1px;\n"
+"border-radius:5px;\n"
+"font:15px \"\345\256\213\344\275\223\";"));
 
         gridLayout_2->addWidget(fontComboBox, 0, 2, 1, 1);
 
@@ -471,7 +512,8 @@ public:
         comboBox->setObjectName(QStringLiteral("comboBox"));
         comboBox->setMinimumSize(QSize(107, 23));
         comboBox->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);"));
+"color: rgb(0, 0, 0);\n"
+""));
 
         gridLayout_2->addWidget(comboBox, 2, 2, 1, 1);
 
@@ -495,57 +537,62 @@ public:
 
         label_10 = new QLabel(widget_3);
         label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setFont(font4);
+        label_10->setFont(font3);
 
         gridLayout_2->addWidget(label_10, 2, 0, 1, 1);
 
         label_12 = new QLabel(widget_3);
         label_12->setObjectName(QStringLiteral("label_12"));
-        label_12->setFont(font4);
+        label_12->setFont(font3);
 
         gridLayout_2->addWidget(label_12, 4, 0, 1, 1);
 
         label_13 = new QLabel(widget_3);
         label_13->setObjectName(QStringLiteral("label_13"));
-        label_13->setFont(font4);
+        label_13->setFont(font3);
 
         gridLayout_2->addWidget(label_13, 5, 0, 1, 1);
 
         label_9 = new QLabel(widget_3);
         label_9->setObjectName(QStringLiteral("label_9"));
-        label_9->setFont(font4);
+        label_9->setFont(font3);
 
         gridLayout_2->addWidget(label_9, 1, 0, 1, 1);
 
         label_11 = new QLabel(widget_3);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setFont(font4);
+        label_11->setFont(font3);
 
         gridLayout_2->addWidget(label_11, 3, 0, 1, 1);
 
         label_14 = new QLabel(widget_3);
         label_14->setObjectName(QStringLiteral("label_14"));
-        label_14->setFont(font4);
+        label_14->setFont(font3);
 
         gridLayout_2->addWidget(label_14, 6, 0, 1, 1);
 
         spinBox = new QSpinBox(widget_3);
         spinBox->setObjectName(QStringLiteral("spinBox"));
         spinBox->setMinimumSize(QSize(107, 23));
-        spinBox->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);"));
+        spinBox->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"border-color:rgba(0,0,0,255);\n"
+"border-style:solid;\n"
+"border-width:1px;\n"
+"border-radius:5px;\n"
+"font:15px \"\345\256\213\344\275\223\";"));
 
         gridLayout_2->addWidget(spinBox, 1, 2, 1, 1);
 
         label_15 = new QLabel(widget_3);
         label_15->setObjectName(QStringLiteral("label_15"));
-        label_15->setFont(font4);
+        label_15->setFont(font3);
 
         gridLayout_2->addWidget(label_15, 7, 0, 1, 1);
 
         label_16 = new QLabel(widget_3);
         label_16->setObjectName(QStringLiteral("label_16"));
-        label_16->setFont(font4);
+        label_16->setFont(font3);
 
         gridLayout_2->addWidget(label_16, 8, 0, 1, 1);
 
@@ -568,7 +615,7 @@ public:
         label_8 = new QLabel(widget_3);
         label_8->setObjectName(QStringLiteral("label_8"));
         label_8->setMinimumSize(QSize(70, 0));
-        label_8->setFont(font4);
+        label_8->setFont(font3);
 
         gridLayout_2->addWidget(label_8, 0, 0, 1, 1);
 
@@ -606,13 +653,17 @@ public:
 
         gridLayout_2->addWidget(comboBox_4, 5, 2, 1, 1);
 
+        horizontalSpacer_10 = new QSpacerItem(31, 20, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_10, 7, 3, 1, 1);
+
 
         verticalLayout->addWidget(widget_3);
 
         pushButton_7 = new QPushButton(scrollAreaWidgetContents);
         pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
         pushButton_7->setMinimumSize(QSize(225, 20));
-        pushButton_7->setFont(font4);
+        pushButton_7->setFont(font3);
         pushButton_7->setStyleSheet(QLatin1String("background-color: rgb(120, 120, 120);\n"
 "border-image: url(:/lib/zhankai.png);\n"
 "border-style:solid;\n"
@@ -633,7 +684,7 @@ public:
         gridLayout_3->setContentsMargins(-1, 0, -1, 0);
         label_19 = new QLabel(widget_4);
         label_19->setObjectName(QStringLiteral("label_19"));
-        label_19->setFont(font4);
+        label_19->setFont(font3);
 
         gridLayout_3->addWidget(label_19, 2, 0, 1, 1);
 
@@ -641,13 +692,13 @@ public:
         label_17->setObjectName(QStringLiteral("label_17"));
         label_17->setMinimumSize(QSize(70, 0));
         label_17->setMaximumSize(QSize(52, 16777215));
-        label_17->setFont(font4);
+        label_17->setFont(font3);
 
         gridLayout_3->addWidget(label_17, 1, 0, 1, 1);
 
         label_20 = new QLabel(widget_4);
         label_20->setObjectName(QStringLiteral("label_20"));
-        label_20->setFont(font4);
+        label_20->setFont(font3);
 
         gridLayout_3->addWidget(label_20, 3, 0, 1, 1);
 
@@ -685,7 +736,7 @@ public:
         pushButton_8 = new QPushButton(scrollAreaWidgetContents);
         pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
         pushButton_8->setMinimumSize(QSize(225, 20));
-        pushButton_8->setFont(font4);
+        pushButton_8->setFont(font3);
         pushButton_8->setStyleSheet(QLatin1String("background-color: rgb(120, 120, 120);\n"
 "border-image: url(:/lib/zhankai.png);\n"
 "border-style:solid;\n"
@@ -706,7 +757,7 @@ public:
         gridLayout_4->setContentsMargins(-1, 0, -1, 0);
         label_22 = new QLabel(widget_5);
         label_22->setObjectName(QStringLiteral("label_22"));
-        label_22->setFont(font4);
+        label_22->setFont(font3);
 
         gridLayout_4->addWidget(label_22, 2, 0, 1, 1);
 
@@ -753,32 +804,32 @@ public:
 
         label_23 = new QLabel(widget_5);
         label_23->setObjectName(QStringLiteral("label_23"));
-        label_23->setFont(font4);
+        label_23->setFont(font3);
 
         gridLayout_4->addWidget(label_23, 4, 0, 1, 1);
 
         label_18 = new QLabel(widget_5);
         label_18->setObjectName(QStringLiteral("label_18"));
         label_18->setMinimumSize(QSize(70, 0));
-        label_18->setFont(font4);
+        label_18->setFont(font3);
 
         gridLayout_4->addWidget(label_18, 0, 0, 1, 1);
 
         label_24 = new QLabel(widget_5);
         label_24->setObjectName(QStringLiteral("label_24"));
-        label_24->setFont(font4);
+        label_24->setFont(font3);
 
         gridLayout_4->addWidget(label_24, 3, 0, 1, 1);
 
         label_25 = new QLabel(widget_5);
         label_25->setObjectName(QStringLiteral("label_25"));
-        label_25->setFont(font4);
+        label_25->setFont(font3);
 
         gridLayout_4->addWidget(label_25, 5, 0, 1, 1);
 
         label_21 = new QLabel(widget_5);
         label_21->setObjectName(QStringLiteral("label_21"));
-        label_21->setFont(font4);
+        label_21->setFont(font3);
 
         gridLayout_4->addWidget(label_21, 1, 0, 1, 1);
 
@@ -808,7 +859,7 @@ public:
         scrollArea->setWidget(scrollAreaWidgetContents);
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(840, 160, 160, 411));
+        verticalLayoutWidget->setGeometry(QRect(930, 30, 161, 701));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
@@ -855,14 +906,218 @@ public:
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setGeometry(QRect(0, 730, 1091, 1));
         label_4->setStyleSheet(QStringLiteral("background-color: rgb(0, 0, 0);"));
+        scrollArea_2 = new QScrollArea(centralWidget);
+        scrollArea_2->setObjectName(QStringLiteral("scrollArea_2"));
+        scrollArea_2->setGeometry(QRect(210, 31, 721, 381));
+        scrollArea_2->setWidgetResizable(true);
+        scrollAreaWidgetContents_2 = new QWidget();
+        scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 719, 379));
+        splitter = new QSplitter(scrollAreaWidgetContents_2);
+        splitter->setObjectName(QStringLiteral("splitter"));
+        splitter->setGeometry(QRect(0, 0, 721, 381));
+        splitter->setOrientation(Qt::Horizontal);
+        splitter->setHandleWidth(0);
+        splitter->setChildrenCollapsible(false);
+        textEdit = new QTextEdit(splitter);
+        textEdit->setObjectName(QStringLiteral("textEdit"));
+        QFont font5;
+        font5.setFamily(QStringLiteral("80"));
+        font5.setPointSize(12);
+        font5.setBold(false);
+        font5.setItalic(false);
+        font5.setWeight(9);
+        textEdit->setFont(font5);
+        textEdit->setStyleSheet(QStringLiteral("font: 75 12pt \"80\";"));
+        splitter->addWidget(textEdit);
+        widget_9 = new QWidget(splitter);
+        widget_9->setObjectName(QStringLiteral("widget_9"));
+        widget_9->setFont(font3);
+        widget_9->setStyleSheet(QStringLiteral("background-color: rgb(130, 255, 85);"));
+        gridLayout_5 = new QGridLayout(widget_9);
+        gridLayout_5->setSpacing(6);
+        gridLayout_5->setContentsMargins(11, 11, 11, 11);
+        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
+        gridLayout_5->setContentsMargins(-1, -1, -1, 6);
+        pushButton_12 = new QPushButton(widget_9);
+        pushButton_12->setObjectName(QStringLiteral("pushButton_12"));
+        pushButton_12->setMinimumSize(QSize(0, 23));
+        pushButton_12->setMaximumSize(QSize(146, 16777215));
+        pushButton_12->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"border-color:rgba(0,0,0,255);\n"
+"border-style:solid;\n"
+"border-width:1px;\n"
+"border-radius:5px;\n"
+"font:15px \"\345\256\213\344\275\223\";"));
+
+        gridLayout_5->addWidget(pushButton_12, 3, 1, 1, 1);
+
+        pushButton_30 = new QPushButton(widget_9);
+        pushButton_30->setObjectName(QStringLiteral("pushButton_30"));
+        pushButton_30->setMinimumSize(QSize(0, 23));
+        pushButton_30->setMaximumSize(QSize(146, 16777215));
+        pushButton_30->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"border-color:rgba(0,0,0,255);\n"
+"border-style:solid;\n"
+"border-width:1px;\n"
+"border-radius:5px;\n"
+"font:15px \"\345\256\213\344\275\223\";"));
+
+        gridLayout_5->addWidget(pushButton_30, 3, 0, 1, 1);
+
+        label_26 = new QLabel(widget_9);
+        label_26->setObjectName(QStringLiteral("label_26"));
+        QFont font6;
+        font6.setPointSize(15);
+        font6.setBold(true);
+        font6.setWeight(75);
+        label_26->setFont(font6);
+        label_26->setAlignment(Qt::AlignCenter);
+
+        gridLayout_5->addWidget(label_26, 0, 0, 1, 2);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_5->addItem(verticalSpacer_3, 2, 0, 1, 2);
+
+        splitter->addWidget(widget_9);
+        scrollArea_2->setWidget(scrollAreaWidgetContents_2);
+        scrollArea_3 = new QScrollArea(centralWidget);
+        scrollArea_3->setObjectName(QStringLiteral("scrollArea_3"));
+        scrollArea_3->setGeometry(QRect(210, 410, 721, 51));
+        scrollArea_3->setLineWidth(-1);
+        scrollArea_3->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        scrollArea_3->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
+        scrollArea_3->setWidgetResizable(true);
+        scrollAreaWidgetContents_4 = new QWidget();
+        scrollAreaWidgetContents_4->setObjectName(QStringLiteral("scrollAreaWidgetContents_4"));
+        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 1204, 32));
+        scrollAreaWidgetContents_4->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"border-color:rgba(0,0,0,255);\n"
+"border-style:solid;\n"
+"border-width:1px;\n"
+"border-radius:3px;\n"
+"font:15px \"80\";\n"
+"}"));
+        horizontalLayout = new QHBoxLayout(scrollAreaWidgetContents_4);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(-1, 0, -1, 0);
+        pushButton_16 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_16->setObjectName(QStringLiteral("pushButton_16"));
+        pushButton_16->setMinimumSize(QSize(0, 23));
+        pushButton_16->setMaximumSize(QSize(16777215, 23));
+        QFont font7;
+        font7.setFamily(QStringLiteral("80"));
+        font7.setBold(false);
+        font7.setItalic(false);
+        font7.setWeight(50);
+        pushButton_16->setFont(font7);
+
+        horizontalLayout->addWidget(pushButton_16);
+
+        pushButton_17 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_17->setObjectName(QStringLiteral("pushButton_17"));
+        pushButton_17->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_17);
+
+        pushButton_18 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_18->setObjectName(QStringLiteral("pushButton_18"));
+        pushButton_18->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_18);
+
+        pushButton_19 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_19->setObjectName(QStringLiteral("pushButton_19"));
+        pushButton_19->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_19);
+
+        pushButton_20 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_20->setObjectName(QStringLiteral("pushButton_20"));
+        pushButton_20->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_20);
+
+        pushButton_21 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_21->setObjectName(QStringLiteral("pushButton_21"));
+        pushButton_21->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_21);
+
+        pushButton_22 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_22->setObjectName(QStringLiteral("pushButton_22"));
+        pushButton_22->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_22);
+
+        pushButton_29 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_29->setObjectName(QStringLiteral("pushButton_29"));
+        pushButton_29->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_29);
+
+        pushButton_28 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_28->setObjectName(QStringLiteral("pushButton_28"));
+        pushButton_28->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_28);
+
+        pushButton_27 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_27->setObjectName(QStringLiteral("pushButton_27"));
+        pushButton_27->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_27);
+
+        pushButton_26 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_26->setObjectName(QStringLiteral("pushButton_26"));
+        pushButton_26->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_26);
+
+        pushButton_25 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_25->setObjectName(QStringLiteral("pushButton_25"));
+        pushButton_25->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_25);
+
+        pushButton_24 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_24->setObjectName(QStringLiteral("pushButton_24"));
+        pushButton_24->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_24);
+
+        pushButton_23 = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_23->setObjectName(QStringLiteral("pushButton_23"));
+        pushButton_23->setMinimumSize(QSize(0, 23));
+
+        horizontalLayout->addWidget(pushButton_23);
+
+        scrollArea_3->setWidget(scrollAreaWidgetContents_4);
+        scrollArea_4 = new QScrollArea(centralWidget);
+        scrollArea_4->setObjectName(QStringLiteral("scrollArea_4"));
+        scrollArea_4->setGeometry(QRect(210, 460, 721, 271));
+        scrollArea_4->setWidgetResizable(true);
+        scrollAreaWidgetContents_5 = new QWidget();
+        scrollAreaWidgetContents_5->setObjectName(QStringLiteral("scrollAreaWidgetContents_5"));
+        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 719, 269));
+        scrollArea_4->setWidget(scrollAreaWidgetContents_5);
         MainWindow->setCentralWidget(centralWidget);
+        scrollArea_3->raise();
         label_4->raise();
         label_2->raise();
         widget->raise();
-        groupBox->raise();
-        groupBox_2->raise();
         scrollArea->raise();
         verticalLayoutWidget->raise();
+        scrollArea_2->raise();
+        scrollArea_4->raise();
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
@@ -885,15 +1140,6 @@ public:
         pushButton->setText(QString());
         pushButton_2->setText(QString());
         pushButton_3->setText(QString());
-        groupBox->setTitle(QApplication::translate("MainWindow", "\344\273\243\347\240\201\345\214\272", nullptr));
-        textEdit->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'ADMUI3Lg'; font-size:11pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'SimSun'; font-size:12pt; font-weight:400;\">#lable</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'SimSun'; font-size:12pt; font-weight:400;\">{</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'SimSun'; font-size:12pt; font-weight:400;\">background:rgb(50,50,50);<br />}</span></p></body></html>", nullptr));
-        groupBox_2->setTitle(QApplication::translate("MainWindow", "\346\216\247\344\273\266\345\214\272", nullptr));
         pushButton_5->setText(QApplication::translate("MainWindow", "\351\242\234\350\211\262\350\256\276\347\275\256     ", nullptr));
         label_5->setText(QApplication::translate("MainWindow", "\345\255\227\344\275\223\351\242\234\350\211\262", nullptr));
         lineEdit_3->setText(QApplication::translate("MainWindow", "#EEEEEE", nullptr));
@@ -964,6 +1210,30 @@ public:
         pushButton_9->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         label_2->setText(QString());
         label_4->setText(QString());
+        textEdit->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'80'; font-size:12pt; font-weight:72; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'SimSun'; font-weight:600;\">#lable</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'SimSun'; font-weight:600;\">{</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'SimSun'; font-weight:600;\">background:rgb(50,50,50);<br />}</span></p></body></html>", nullptr));
+        pushButton_12->setText(QApplication::translate("MainWindow", "\345\244\215\345\210\266\344\273\243\347\240\201", nullptr));
+        pushButton_30->setText(QApplication::translate("MainWindow", "\347\224\237\346\210\220\346\216\247\344\273\266", nullptr));
+        label_26->setText(QApplication::translate("MainWindow", "\346\225\210 \346\236\234 \345\233\276", nullptr));
+        pushButton_16->setText(QApplication::translate("MainWindow", "\351\274\240\346\240\207\346\202\254\346\265\256", nullptr));
+        pushButton_17->setText(QApplication::translate("MainWindow", "\351\274\240\346\240\207\346\214\211\344\270\213", nullptr));
+        pushButton_18->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_19->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_20->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_21->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_22->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_29->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_28->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_27->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_26->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_25->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_24->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_23->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
     } // retranslateUi
 
 };

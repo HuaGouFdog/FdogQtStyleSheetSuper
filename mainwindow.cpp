@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include<QDebug>
 #include<QPoint>
+#include<QClipboard>
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
@@ -107,4 +108,22 @@ void MainWindow::on_pushButton_10_clicked()
 void MainWindow::on_pushButton_11_clicked()
 {
     ui->widget_7->setVisible(false);
+}
+
+void MainWindow::on_pushButton_12_clicked()
+{
+    QClipboard *clip=QApplication::clipboard();
+    clip->setText(ui->textEdit->toPlainText());
+}
+
+void MainWindow::on_pushButton_16_clicked()
+{
+    ui->textEdit->setStyleSheet("font: 75 12pt \"DejaVu Sans Mono\";font-weight: bold;");
+    ui->textEdit->append(":hover\n{\n\n}");
+}
+
+void MainWindow::on_pushButton_17_clicked()
+{
+    ui->textEdit->setStyleSheet("font: 75 12pt \"DejaVu Sans Mono\";font-weight: bold;");
+    ui->textEdit->append(":pressed\n{\n\n}");
 }
