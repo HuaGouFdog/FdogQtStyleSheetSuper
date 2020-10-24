@@ -119,14 +119,6 @@ public:
     QSpacerItem *horizontalSpacer_11;
     QSpacerItem *verticalSpacer_2;
     QSpacerItem *verticalSpacer;
-    QWidget *verticalLayoutWidget;
-    QVBoxLayout *verticalLayout_2;
-    QPushButton *pushButton_10;
-    QWidget *widget_6;
-    QPushButton *pushButton_11;
-    QWidget *widget_7;
-    QPushButton *pushButton_9;
-    QWidget *widget_8;
     QLabel *label_2;
     QLabel *label_4;
     QScrollArea *scrollArea_2;
@@ -134,11 +126,11 @@ public:
     QSplitter *splitter;
     QTextEdit *textEdit;
     QWidget *widget_9;
-    QGridLayout *gridLayout_5;
+    QVBoxLayout *verticalLayout_2;
+    QLabel *label_26;
+    QPushButton *pushButton_10;
     QPushButton *pushButton_12;
     QPushButton *pushButton_30;
-    QLabel *label_26;
-    QSpacerItem *verticalSpacer_3;
     QScrollArea *scrollArea_3;
     QWidget *scrollAreaWidgetContents_4;
     QHBoxLayout *horizontalLayout;
@@ -158,6 +150,7 @@ public:
     QPushButton *pushButton_23;
     QScrollArea *scrollArea_4;
     QWidget *scrollAreaWidgetContents_5;
+    QPushButton *pushButton_9;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -857,47 +850,6 @@ public:
         verticalLayout->addItem(verticalSpacer);
 
         scrollArea->setWidget(scrollAreaWidgetContents);
-        verticalLayoutWidget = new QWidget(centralWidget);
-        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(930, 30, 161, 701));
-        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout_2->setSpacing(6);
-        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        pushButton_10 = new QPushButton(verticalLayoutWidget);
-        pushButton_10->setObjectName(QStringLiteral("pushButton_10"));
-
-        verticalLayout_2->addWidget(pushButton_10);
-
-        widget_6 = new QWidget(verticalLayoutWidget);
-        widget_6->setObjectName(QStringLiteral("widget_6"));
-        widget_6->setStyleSheet(QStringLiteral("background-color: rgb(0, 255, 127);"));
-
-        verticalLayout_2->addWidget(widget_6);
-
-        pushButton_11 = new QPushButton(verticalLayoutWidget);
-        pushButton_11->setObjectName(QStringLiteral("pushButton_11"));
-
-        verticalLayout_2->addWidget(pushButton_11);
-
-        widget_7 = new QWidget(verticalLayoutWidget);
-        widget_7->setObjectName(QStringLiteral("widget_7"));
-        widget_7->setStyleSheet(QStringLiteral("background-color: rgb(0, 255, 127);"));
-
-        verticalLayout_2->addWidget(widget_7);
-
-        pushButton_9 = new QPushButton(verticalLayoutWidget);
-        pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
-
-        verticalLayout_2->addWidget(pushButton_9);
-
-        widget_8 = new QWidget(verticalLayoutWidget);
-        widget_8->setObjectName(QStringLiteral("widget_8"));
-        widget_8->setStyleSheet(QStringLiteral("background-color: rgb(0, 255, 127);"));
-
-        verticalLayout_2->addWidget(widget_8);
-
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(0, 30, 1091, 1));
@@ -908,19 +860,25 @@ public:
         label_4->setStyleSheet(QStringLiteral("background-color: rgb(0, 0, 0);"));
         scrollArea_2 = new QScrollArea(centralWidget);
         scrollArea_2->setObjectName(QStringLiteral("scrollArea_2"));
-        scrollArea_2->setGeometry(QRect(210, 31, 721, 381));
+        scrollArea_2->setGeometry(QRect(210, 31, 881, 381));
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 719, 379));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 879, 379));
         splitter = new QSplitter(scrollAreaWidgetContents_2);
         splitter->setObjectName(QStringLiteral("splitter"));
-        splitter->setGeometry(QRect(0, 0, 721, 381));
+        splitter->setGeometry(QRect(0, 0, 881, 381));
         splitter->setOrientation(Qt::Horizontal);
         splitter->setHandleWidth(0);
         splitter->setChildrenCollapsible(false);
         textEdit = new QTextEdit(splitter);
         textEdit->setObjectName(QStringLiteral("textEdit"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(2);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(textEdit->sizePolicy().hasHeightForWidth());
+        textEdit->setSizePolicy(sizePolicy);
+        textEdit->setMinimumSize(QSize(0, 0));
         QFont font5;
         font5.setFamily(QStringLiteral("80"));
         font5.setPointSize(12);
@@ -932,13 +890,36 @@ public:
         splitter->addWidget(textEdit);
         widget_9 = new QWidget(splitter);
         widget_9->setObjectName(QStringLiteral("widget_9"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(1);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(widget_9->sizePolicy().hasHeightForWidth());
+        widget_9->setSizePolicy(sizePolicy1);
         widget_9->setFont(font3);
-        widget_9->setStyleSheet(QStringLiteral("background-color: rgb(130, 255, 85);"));
-        gridLayout_5 = new QGridLayout(widget_9);
-        gridLayout_5->setSpacing(6);
-        gridLayout_5->setContentsMargins(11, 11, 11, 11);
-        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
-        gridLayout_5->setContentsMargins(-1, -1, -1, 6);
+        widget_9->setStyleSheet(QLatin1String("#widget_9\n"
+"{\n"
+"background-color: rgb(130, 255, 85);\n"
+"}"));
+        verticalLayout_2 = new QVBoxLayout(widget_9);
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        label_26 = new QLabel(widget_9);
+        label_26->setObjectName(QStringLiteral("label_26"));
+        QFont font6;
+        font6.setPointSize(15);
+        font6.setBold(true);
+        font6.setWeight(75);
+        label_26->setFont(font6);
+        label_26->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_2->addWidget(label_26);
+
+        pushButton_10 = new QPushButton(widget_9);
+        pushButton_10->setObjectName(QStringLiteral("pushButton_10"));
+
+        verticalLayout_2->addWidget(pushButton_10);
+
         pushButton_12 = new QPushButton(widget_9);
         pushButton_12->setObjectName(QStringLiteral("pushButton_12"));
         pushButton_12->setMinimumSize(QSize(0, 23));
@@ -951,7 +932,7 @@ public:
 "border-radius:5px;\n"
 "font:15px \"\345\256\213\344\275\223\";"));
 
-        gridLayout_5->addWidget(pushButton_12, 3, 1, 1, 1);
+        verticalLayout_2->addWidget(pushButton_12);
 
         pushButton_30 = new QPushButton(widget_9);
         pushButton_30->setObjectName(QStringLiteral("pushButton_30"));
@@ -965,35 +946,20 @@ public:
 "border-radius:5px;\n"
 "font:15px \"\345\256\213\344\275\223\";"));
 
-        gridLayout_5->addWidget(pushButton_30, 3, 0, 1, 1);
-
-        label_26 = new QLabel(widget_9);
-        label_26->setObjectName(QStringLiteral("label_26"));
-        QFont font6;
-        font6.setPointSize(15);
-        font6.setBold(true);
-        font6.setWeight(75);
-        label_26->setFont(font6);
-        label_26->setAlignment(Qt::AlignCenter);
-
-        gridLayout_5->addWidget(label_26, 0, 0, 1, 2);
-
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        gridLayout_5->addItem(verticalSpacer_3, 2, 0, 1, 2);
+        verticalLayout_2->addWidget(pushButton_30);
 
         splitter->addWidget(widget_9);
         scrollArea_2->setWidget(scrollAreaWidgetContents_2);
         scrollArea_3 = new QScrollArea(centralWidget);
         scrollArea_3->setObjectName(QStringLiteral("scrollArea_3"));
-        scrollArea_3->setGeometry(QRect(210, 410, 721, 51));
+        scrollArea_3->setGeometry(QRect(210, 410, 881, 41));
         scrollArea_3->setLineWidth(-1);
         scrollArea_3->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_3->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_4 = new QWidget();
         scrollAreaWidgetContents_4->setObjectName(QStringLiteral("scrollAreaWidgetContents_4"));
-        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 1204, 32));
+        scrollAreaWidgetContents_4->setGeometry(QRect(-325, 0, 1204, 23));
         scrollAreaWidgetContents_4->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "background-color: rgb(255, 255, 255);\n"
@@ -1103,11 +1069,14 @@ public:
         scrollArea_3->setWidget(scrollAreaWidgetContents_4);
         scrollArea_4 = new QScrollArea(centralWidget);
         scrollArea_4->setObjectName(QStringLiteral("scrollArea_4"));
-        scrollArea_4->setGeometry(QRect(210, 460, 721, 271));
+        scrollArea_4->setGeometry(QRect(210, 450, 881, 281));
         scrollArea_4->setWidgetResizable(true);
         scrollAreaWidgetContents_5 = new QWidget();
         scrollAreaWidgetContents_5->setObjectName(QStringLiteral("scrollAreaWidgetContents_5"));
-        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 719, 269));
+        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 879, 279));
+        pushButton_9 = new QPushButton(scrollAreaWidgetContents_5);
+        pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
+        pushButton_9->setGeometry(QRect(20, 20, 75, 23));
         scrollArea_4->setWidget(scrollAreaWidgetContents_5);
         MainWindow->setCentralWidget(centralWidget);
         scrollArea_3->raise();
@@ -1115,7 +1084,6 @@ public:
         label_2->raise();
         widget->raise();
         scrollArea->raise();
-        verticalLayoutWidget->raise();
         scrollArea_2->raise();
         scrollArea_4->raise();
         statusBar = new QStatusBar(MainWindow);
@@ -1205,21 +1173,17 @@ public:
         label_24->setText(QApplication::translate("MainWindow", "\346\214\211\351\222\256\345\256\275\345\272\246", nullptr));
         label_25->setText(QApplication::translate("MainWindow", "\345\217\263\347\274\251\350\277\233", nullptr));
         label_21->setText(QApplication::translate("MainWindow", "\346\214\211\351\222\256\344\270\212\351\253\230", nullptr));
-        pushButton_10->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_11->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_9->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         label_2->setText(QString());
         label_4->setText(QString());
         textEdit->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'80'; font-size:12pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'SimSun'; font-weight:600;\">#lable</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'SimSun'; font-weight:600;\">{</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'SimSun'; font-weight:600;\">background:rgb(50,50,50);<br />}</span></p></body></html>", nullptr));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">/*dsdsadsad*/</p></body></html>", nullptr));
+        label_26->setText(QApplication::translate("MainWindow", "\346\225\210 \346\236\234 \345\233\276", nullptr));
+        pushButton_10->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_12->setText(QApplication::translate("MainWindow", "\345\244\215\345\210\266\344\273\243\347\240\201", nullptr));
         pushButton_30->setText(QApplication::translate("MainWindow", "\347\224\237\346\210\220\346\216\247\344\273\266", nullptr));
-        label_26->setText(QApplication::translate("MainWindow", "\346\225\210 \346\236\234 \345\233\276", nullptr));
         pushButton_16->setText(QApplication::translate("MainWindow", "\351\274\240\346\240\207\346\202\254\346\265\256", nullptr));
         pushButton_17->setText(QApplication::translate("MainWindow", "\351\274\240\346\240\207\346\214\211\344\270\213", nullptr));
         pushButton_18->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
@@ -1234,6 +1198,7 @@ public:
         pushButton_25->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_24->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_23->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_9->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
     } // retranslateUi
 
 };

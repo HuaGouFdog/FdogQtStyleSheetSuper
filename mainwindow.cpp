@@ -100,16 +100,6 @@ void MainWindow::on_pushButton_8_clicked()
 }
 
 
-void MainWindow::on_pushButton_10_clicked()
-{
-    ui->widget_6->setVisible(false);
-}
-
-void MainWindow::on_pushButton_11_clicked()
-{
-    ui->widget_7->setVisible(false);
-}
-
 void MainWindow::on_pushButton_12_clicked()
 {
     QClipboard *clip=QApplication::clipboard();

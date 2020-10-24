@@ -1626,60 +1626,6 @@ color: rgb(0, 0, 0);</string>
      </layout>
     </widget>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>930</x>
-      <y>30</y>
-      <width>161</width>
-      <height>701</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QPushButton" name="pushButton_10">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QWidget" name="widget_6" native="true">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(0, 255, 127);</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_11">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QWidget" name="widget_7" native="true">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(0, 255, 127);</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_9">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QWidget" name="widget_8" native="true">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(0, 255, 127);</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
@@ -1717,7 +1663,7 @@ color: rgb(0, 0, 0);</string>
      <rect>
       <x>210</x>
       <y>31</y>
-      <width>721</width>
+      <width>881</width>
       <height>381</height>
      </rect>
     </property>
@@ -1729,7 +1675,7 @@ color: rgb(0, 0, 0);</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>719</width>
+       <width>879</width>
        <height>379</height>
       </rect>
      </property>
@@ -1738,7 +1684,7 @@ color: rgb(0, 0, 0);</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>721</width>
+        <width>881</width>
         <height>381</height>
        </rect>
       </property>
@@ -1752,6 +1698,18 @@ color: rgb(0, 0, 0);</string>
        <bool>false</bool>
       </property>
       <widget class="QTextEdit" name="textEdit">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>2</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>80</family>
@@ -1769,12 +1727,16 @@ color: rgb(0, 0, 0);</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'80'; font-size:12pt; font-weight:72; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-weight:600;&quot;&gt;#lable&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-weight:600;&quot;&gt;{&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-weight:600;&quot;&gt;background:rgb(50,50,50);&lt;br /&gt;}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;/*dsdsadsad*/&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QWidget" name="widget_9" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="font">
         <font>
          <weight>75</weight>
@@ -1782,13 +1744,37 @@ p, li { white-space: pre-wrap; }
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(130, 255, 85);</string>
+        <string notr="true">#widget_9
+{
+background-color: rgb(130, 255, 85);
+}</string>
        </property>
-       <layout class="QGridLayout" name="gridLayout_5">
-        <property name="bottomMargin">
-         <number>6</number>
-        </property>
-        <item row="3" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_26">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>效 果 图</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_10">
+          <property name="text">
+           <string>PushButton</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="pushButton_12">
           <property name="minimumSize">
            <size>
@@ -1816,7 +1802,7 @@ font:15px &quot;宋体&quot;;</string>
           </property>
          </widget>
         </item>
-        <item row="3" column="0">
+        <item>
          <widget class="QPushButton" name="pushButton_30">
           <property name="minimumSize">
            <size>
@@ -1844,36 +1830,6 @@ font:15px &quot;宋体&quot;;</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="0" colspan="2">
-         <widget class="QLabel" name="label_26">
-          <property name="font">
-           <font>
-            <pointsize>15</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>效 果 图</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0" colspan="2">
-         <spacer name="verticalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
        </layout>
       </widget>
      </widget>
@@ -1884,8 +1840,8 @@ font:15px &quot;宋体&quot;;</string>
      <rect>
       <x>210</x>
       <y>410</y>
-      <width>721</width>
-      <height>51</height>
+      <width>881</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="lineWidth">
@@ -1903,10 +1859,10 @@ font:15px &quot;宋体&quot;;</string>
     <widget class="QWidget" name="scrollAreaWidgetContents_4">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>-325</x>
        <y>0</y>
        <width>1204</width>
-       <height>32</height>
+       <height>23</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -2132,9 +2088,9 @@ font:15px &quot;80&quot;;
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>460</y>
-      <width>721</width>
-      <height>271</height>
+      <y>450</y>
+      <width>881</width>
+      <height>281</height>
      </rect>
     </property>
     <property name="widgetResizable">
@@ -2145,10 +2101,23 @@ font:15px &quot;80&quot;;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>719</width>
-       <height>269</height>
+       <width>879</width>
+       <height>279</height>
       </rect>
      </property>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <zorder>scrollArea_3</zorder>
@@ -2156,7 +2125,6 @@ font:15px &quot;80&quot;;
    <zorder>label_2</zorder>
    <zorder>widget</zorder>
    <zorder>scrollArea</zorder>
-   <zorder>verticalLayoutWidget</zorder>
    <zorder>scrollArea_2</zorder>
    <zorder>scrollArea_4</zorder>
   </widget>
