@@ -278,8 +278,11 @@ debug\moc_mainwindow.cpp: ..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QMainWin
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qtouchdevice.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qicon.h \
+		colorform.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QWidget \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\QMouseEvent \
 		..\..\QT\5.10.0\msvc2015_64\include\QtCore\QPoint \
+		..\..\QT\5.10.0\msvc2015_64\include\QtCore\QString \
 		mainwindow.h \
 		debug\moc_predefs.h \
 		..\..\QT\5.10.0\msvc2015_64\bin\moc.exe
@@ -527,8 +530,11 @@ debug\main.obj: main.cpp mainwindow.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qtouchdevice.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qicon.h \
+		colorform.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QWidget \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\QMouseEvent \
 		..\..\QT\5.10.0\msvc2015_64\include\QtCore\QPoint \
+		..\..\QT\5.10.0\msvc2015_64\include\QtCore\QString \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QApplication \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qapplication.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtCore\qcoreapplication.h \
@@ -644,8 +650,11 @@ debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qtouchdevice.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qicon.h \
+		colorform.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QWidget \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\QMouseEvent \
 		..\..\QT\5.10.0\msvc2015_64\include\QtCore\QPoint \
+		..\..\QT\5.10.0\msvc2015_64\include\QtCore\QString \
 		ui_mainwindow.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtCore\QVariant \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QAction \
@@ -660,6 +669,9 @@ debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qinputmethod.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QButtonGroup \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qbuttongroup.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QCheckBox \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qcheckbox.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qabstractbutton.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QComboBox \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qcombobox.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
@@ -677,13 +689,12 @@ debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QFontComboBox \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qfontcombobox.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qfontdatabase.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QFrame \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QGridLayout \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qlayout.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qlayoutitem.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qboxlayout.h \
-		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QGroupBox \
-		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qgroupbox.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QHBoxLayout \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QHeaderView \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qheaderview.h \
@@ -698,22 +709,33 @@ debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qtextformat.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qpen.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qtextoption.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QProgressBar \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qprogressbar.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QPushButton \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qpushbutton.h \
-		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qabstractbutton.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QRadioButton \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qradiobutton.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QScrollArea \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qscrollarea.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QScrollBar \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qscrollbar.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QSlider \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QSpacerItem \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QSpinBox \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qspinbox.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QSplitter \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qsplitter.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QStackedWidget \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qstackedwidget.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QStatusBar \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qstatusbar.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QTextEdit \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qtextedit.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qtextdocument.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QVBoxLayout \
-		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QWidget \
-		..\..\QT\5.10.0\msvc2015_64\include\QtCore\QDebug
+		..\..\QT\5.10.0\msvc2015_64\include\QtCore\QDebug \
+		..\..\QT\5.10.0\msvc2015_64\include\QtGui\QClipboard \
+		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qclipboard.h
 
 debug\colorform.obj: colorform.cpp colorform.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QWidget \
@@ -851,7 +873,20 @@ debug\colorform.obj: colorform.cpp colorform.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qstyle.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qtabbar.h \
 		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qtabwidget.h \
-		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qrubberband.h
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qrubberband.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QLabel \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qlabel.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QLineEdit \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qlineedit.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qtextcursor.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qtextformat.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qpen.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtGui\qtextoption.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QPushButton \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qpushbutton.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\qabstractbutton.h \
+		..\..\QT\5.10.0\msvc2015_64\include\QtWidgets\QSlider \
+		..\..\QT\5.10.0\msvc2015_64\include\QtCore\QDebug
 
 debug\qrc_lib.obj: debug\qrc_lib.cpp 
 

@@ -13,19 +13,26 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFontComboBox>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QScrollBar>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QSplitter>
+#include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
@@ -128,7 +135,11 @@ public:
     QWidget *widget_9;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_26;
+    QStackedWidget *stackedWidget;
+    QWidget *page;
+    QGridLayout *gridLayout_5;
     QPushButton *pushButton_10;
+    QWidget *page_2;
     QPushButton *pushButton_12;
     QPushButton *pushButton_30;
     QScrollArea *scrollArea_3;
@@ -151,13 +162,23 @@ public:
     QScrollArea *scrollArea_4;
     QWidget *scrollAreaWidgetContents_5;
     QPushButton *pushButton_9;
+    QRadioButton *radioButton;
+    QCheckBox *checkBox;
+    QLabel *label_27;
+    QLineEdit *lineEdit_4;
+    QSpinBox *spinBox_13;
+    QComboBox *comboBox_6;
+    QScrollBar *horizontalScrollBar;
+    QSlider *horizontalSlider;
+    QProgressBar *progressBar;
+    QFrame *line;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1090, 753);
+        MainWindow->resize(1090, 713);
         MainWindow->setMinimumSize(QSize(1000, 700));
         QFont font;
         font.setPointSize(9);
@@ -276,52 +297,18 @@ public:
 
         scrollArea = new QScrollArea(centralWidget);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
-        scrollArea->setGeometry(QRect(0, 31, 212, 701));
+        scrollArea->setGeometry(QRect(0, 31, 212, 661));
         QFont font2;
         font2.setBold(false);
         font2.setWeight(50);
         scrollArea->setFont(font2);
-        scrollArea->setStyleSheet(QStringLiteral("background-color: rgba(255, 255, 255, 0);"));
+        scrollArea->setStyleSheet(QStringLiteral(""));
         scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 225, 729));
-        scrollAreaWidgetContents->setStyleSheet(QLatin1String("#scrollAreaWidgetContents\n"
-"{\n"
-"background-color: rgb(74, 74, 74);\n"
-"}\n"
-"QComboBox\n"
-"{\n"
-"background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);\n"
-"border-color:rgba(0,0,0,255);\n"
-"border-style:solid;\n"
-"border-width:1px;\n"
-"border-radius:3px;\n"
-"font:15px \"80\";\n"
-"}\n"
-"QSpinBox\n"
-"{\n"
-"background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);\n"
-"border-color:rgba(0,0,0,255);\n"
-"border-style:solid;\n"
-"border-width:1px;\n"
-"border-radius:3px;\n"
-"font:15px \"80\";\n"
-"}\n"
-"\n"
-"QFontComboBox\n"
-"{\n"
-"background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);\n"
-"border-color:rgba(0,0,0,255);\n"
-"border-style:solid;\n"
-"border-width:1px;\n"
-"border-radius:3px;\n"
-"font:15px \"80\";\n"
-"}"));
+        scrollAreaWidgetContents->setStyleSheet(QStringLiteral(""));
         verticalLayout = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout->setSpacing(1);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -347,8 +334,7 @@ public:
         widget_2->setObjectName(QStringLiteral("widget_2"));
         widget_2->setMinimumSize(QSize(208, 0));
         widget_2->setMaximumSize(QSize(208, 85));
-        widget_2->setStyleSheet(QLatin1String("color: rgb(204, 204, 204);\n"
-""));
+        widget_2->setStyleSheet(QStringLiteral(""));
         gridLayout = new QGridLayout(widget_2);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
@@ -471,8 +457,7 @@ public:
         widget_3->setObjectName(QStringLiteral("widget_3"));
         widget_3->setMinimumSize(QSize(208, 300));
         widget_3->setMaximumSize(QSize(208, 300));
-        widget_3->setStyleSheet(QLatin1String("color: rgb(204, 204, 204);\n"
-""));
+        widget_3->setStyleSheet(QStringLiteral(""));
         gridLayout_2 = new QGridLayout(widget_3);
         gridLayout_2->setSpacing(6);
         gridLayout_2->setContentsMargins(11, 11, 11, 11);
@@ -668,8 +653,7 @@ public:
         widget_4->setObjectName(QStringLiteral("widget_4"));
         widget_4->setMinimumSize(QSize(208, 0));
         widget_4->setMaximumSize(QSize(208, 98));
-        widget_4->setStyleSheet(QLatin1String("color: rgb(204, 204, 204);\n"
-""));
+        widget_4->setStyleSheet(QStringLiteral(""));
         gridLayout_3 = new QGridLayout(widget_4);
         gridLayout_3->setSpacing(6);
         gridLayout_3->setContentsMargins(11, 11, 11, 11);
@@ -741,8 +725,7 @@ public:
         widget_5->setObjectName(QStringLiteral("widget_5"));
         widget_5->setMinimumSize(QSize(208, 0));
         widget_5->setMaximumSize(QSize(208, 214));
-        widget_5->setStyleSheet(QLatin1String("color: rgb(204, 204, 204);\n"
-""));
+        widget_5->setStyleSheet(QStringLiteral(""));
         gridLayout_4 = new QGridLayout(widget_5);
         gridLayout_4->setSpacing(6);
         gridLayout_4->setContentsMargins(11, 11, 11, 11);
@@ -856,7 +839,7 @@ public:
         label_2->setStyleSheet(QStringLiteral("background-color: rgb(0, 0, 0);"));
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(0, 730, 1091, 1));
+        label_4->setGeometry(QRect(0, 690, 1091, 1));
         label_4->setStyleSheet(QStringLiteral("background-color: rgb(0, 0, 0);"));
         scrollArea_2 = new QScrollArea(centralWidget);
         scrollArea_2->setObjectName(QStringLiteral("scrollArea_2"));
@@ -915,10 +898,26 @@ public:
 
         verticalLayout_2->addWidget(label_26);
 
-        pushButton_10 = new QPushButton(widget_9);
+        stackedWidget = new QStackedWidget(widget_9);
+        stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
+        page = new QWidget();
+        page->setObjectName(QStringLiteral("page"));
+        gridLayout_5 = new QGridLayout(page);
+        gridLayout_5->setSpacing(6);
+        gridLayout_5->setContentsMargins(11, 11, 11, 11);
+        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
+        pushButton_10 = new QPushButton(page);
         pushButton_10->setObjectName(QStringLiteral("pushButton_10"));
+        pushButton_10->setMinimumSize(QSize(0, 33));
 
-        verticalLayout_2->addWidget(pushButton_10);
+        gridLayout_5->addWidget(pushButton_10, 1, 0, 1, 1);
+
+        stackedWidget->addWidget(page);
+        page_2 = new QWidget();
+        page_2->setObjectName(QStringLiteral("page_2"));
+        stackedWidget->addWidget(page_2);
+
+        verticalLayout_2->addWidget(stackedWidget);
 
         pushButton_12 = new QPushButton(widget_9);
         pushButton_12->setObjectName(QStringLiteral("pushButton_12"));
@@ -959,7 +958,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_4 = new QWidget();
         scrollAreaWidgetContents_4->setObjectName(QStringLiteral("scrollAreaWidgetContents_4"));
-        scrollAreaWidgetContents_4->setGeometry(QRect(-325, 0, 1204, 23));
+        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 1204, 23));
         scrollAreaWidgetContents_4->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "background-color: rgb(255, 255, 255);\n"
@@ -1069,14 +1068,50 @@ public:
         scrollArea_3->setWidget(scrollAreaWidgetContents_4);
         scrollArea_4 = new QScrollArea(centralWidget);
         scrollArea_4->setObjectName(QStringLiteral("scrollArea_4"));
-        scrollArea_4->setGeometry(QRect(210, 450, 881, 281));
+        scrollArea_4->setGeometry(QRect(210, 450, 881, 241));
+        scrollArea_4->setStyleSheet(QStringLiteral("background-color: rgb(131, 131, 131);"));
         scrollArea_4->setWidgetResizable(true);
         scrollAreaWidgetContents_5 = new QWidget();
         scrollAreaWidgetContents_5->setObjectName(QStringLiteral("scrollAreaWidgetContents_5"));
-        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 879, 279));
+        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 879, 239));
         pushButton_9 = new QPushButton(scrollAreaWidgetContents_5);
         pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
-        pushButton_9->setGeometry(QRect(20, 20, 75, 23));
+        pushButton_9->setGeometry(QRect(140, 10, 91, 23));
+        radioButton = new QRadioButton(scrollAreaWidgetContents_5);
+        radioButton->setObjectName(QStringLiteral("radioButton"));
+        radioButton->setGeometry(QRect(30, 50, 89, 21));
+        checkBox = new QCheckBox(scrollAreaWidgetContents_5);
+        checkBox->setObjectName(QStringLiteral("checkBox"));
+        checkBox->setGeometry(QRect(30, 90, 71, 21));
+        label_27 = new QLabel(scrollAreaWidgetContents_5);
+        label_27->setObjectName(QStringLiteral("label_27"));
+        label_27->setGeometry(QRect(30, 20, 61, 20));
+        lineEdit_4 = new QLineEdit(scrollAreaWidgetContents_5);
+        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
+        lineEdit_4->setGeometry(QRect(130, 100, 113, 20));
+        spinBox_13 = new QSpinBox(scrollAreaWidgetContents_5);
+        spinBox_13->setObjectName(QStringLiteral("spinBox_13"));
+        spinBox_13->setGeometry(QRect(130, 140, 111, 22));
+        comboBox_6 = new QComboBox(scrollAreaWidgetContents_5);
+        comboBox_6->setObjectName(QStringLiteral("comboBox_6"));
+        comboBox_6->setGeometry(QRect(140, 50, 91, 22));
+        horizontalScrollBar = new QScrollBar(scrollAreaWidgetContents_5);
+        horizontalScrollBar->setObjectName(QStringLiteral("horizontalScrollBar"));
+        horizontalScrollBar->setGeometry(QRect(260, 100, 160, 16));
+        horizontalScrollBar->setOrientation(Qt::Horizontal);
+        horizontalSlider = new QSlider(scrollAreaWidgetContents_5);
+        horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
+        horizontalSlider->setGeometry(QRect(260, 140, 160, 22));
+        horizontalSlider->setOrientation(Qt::Horizontal);
+        progressBar = new QProgressBar(scrollAreaWidgetContents_5);
+        progressBar->setObjectName(QStringLiteral("progressBar"));
+        progressBar->setGeometry(QRect(110, 180, 118, 23));
+        progressBar->setValue(24);
+        line = new QFrame(scrollAreaWidgetContents_5);
+        line->setObjectName(QStringLiteral("line"));
+        line->setGeometry(QRect(90, 100, 0, 381));
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
         scrollArea_4->setWidget(scrollAreaWidgetContents_5);
         MainWindow->setCentralWidget(centralWidget);
         scrollArea_3->raise();
@@ -1179,11 +1214,11 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'80'; font-size:12pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">/*dsdsadsad*/</p></body></html>", nullptr));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
         label_26->setText(QApplication::translate("MainWindow", "\346\225\210 \346\236\234 \345\233\276", nullptr));
         pushButton_10->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_12->setText(QApplication::translate("MainWindow", "\345\244\215\345\210\266\344\273\243\347\240\201", nullptr));
-        pushButton_30->setText(QApplication::translate("MainWindow", "\347\224\237\346\210\220\346\216\247\344\273\266", nullptr));
+        pushButton_30->setText(QApplication::translate("MainWindow", "\347\224\237\346\210\220\346\225\210\346\236\234\345\233\276", nullptr));
         pushButton_16->setText(QApplication::translate("MainWindow", "\351\274\240\346\240\207\346\202\254\346\265\256", nullptr));
         pushButton_17->setText(QApplication::translate("MainWindow", "\351\274\240\346\240\207\346\214\211\344\270\213", nullptr));
         pushButton_18->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
@@ -1199,6 +1234,9 @@ public:
         pushButton_24->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_23->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_9->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        radioButton->setText(QApplication::translate("MainWindow", "RadioButton", nullptr));
+        checkBox->setText(QApplication::translate("MainWindow", "CheckBox", nullptr));
+        label_27->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
     } // retranslateUi
 
 };

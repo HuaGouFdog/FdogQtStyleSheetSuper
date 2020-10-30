@@ -2,8 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "colorform.h"
 #include<QMouseEvent>
 #include<QPoint>
+#include<QString>
 namespace Ui {
 class MainWindow;
 }
@@ -24,7 +26,9 @@ public:
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     void mouseReleaseEvent(QMouseEvent *event);
-
+    QString str_1 = QString("color: rgba(%1, %2, %3,%4);");
+    QString str_2 = QString("background-color:rgba(%1,%2,%3,%4);");
+    QString str_3 = QString("border-color:rgba(%1,%2,%3,%4);");
 private slots:
     void on_pushButton_5_clicked();
 
@@ -34,15 +38,25 @@ private slots:
 
     void on_pushButton_6_clicked();
 
-
     void on_pushButton_12_clicked();
 
     void on_pushButton_16_clicked();
 
     void on_pushButton_17_clicked();
 
+    void on_pushButton_30_clicked();
+
+private slots:
+    void PrintLogMsg_font(QString msg);
+    void PrintLogMsg_backgroud(QString msg);
+    void PrintLogMsg_border(QString msg);
+    void on_pushButton_13_clicked();
+    void on_pushButton_14_clicked();
+    void on_pushButton_15_clicked();
+
 private:
     Ui::MainWindow *ui;
+    ColorForm * cp;
 };
 
 #endif // MAINWINDOW_H
