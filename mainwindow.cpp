@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::FramelessWindowHint);
-    ui->statusBar->showMessage(tr("欢迎使用皮肤生成器     作者：花狗Fdog  QQ：2506897252"));
+    ui->statusBar->showMessage(tr("欢迎使用QSS生成器     作者：花狗Fdog  QQ交流群：227421536  欢迎提出意见！"));
     ui->statusBar->setStyleSheet("color: rgb(226, 226, 226);");
 }
 
@@ -153,6 +153,7 @@ void MainWindow::on_pushButton_13_clicked() //字体颜色
 
 void MainWindow::on_pushButton_14_clicked() //背景颜色
 {
+
     cp = new ColorForm(0,ui->lineEdit_2->text());
     cp->show();
     connect(cp,SIGNAL(GetUdpLogMsg(QString)),this,SLOT(PrintLogMsg_backgroud(QString)));
