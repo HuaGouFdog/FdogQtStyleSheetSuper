@@ -3,6 +3,7 @@
 #include<QDebug>
 #include<QPoint>
 #include<QClipboard>
+#include"qssstyle.h"
 #if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
@@ -15,26 +16,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->statusBar->showMessage(tr("欢迎使用QSS生成器     作者：花狗Fdog  QQ交流群：227421536  欢迎提出意见！"));
     ui->statusBar->setStyleSheet("color: rgb(226, 226, 226);");
     ui->textEdit->setStyleSheet("font: 75 12pt \"DejaVu Sans Mono\";font-weight: bold;");
-    Group = new QButtonGroup(this);
-    Group->addButton(ui->pushButton_11,1);
-    Group->addButton(ui->pushButton_23,2);
-    Group->addButton(ui->pushButton_24,3);
-    Group->addButton(ui->pushButton_25,4);
-    Group->addButton(ui->pushButton_26,5);
-    Group->addButton(ui->pushButton_31,6);
-    Group->addButton(ui->pushButton_32,7);
-    Group->addButton(ui->pushButton_33,8);
-    Group->addButton(ui->pushButton_34,9);
-    Group->addButton(ui->pushButton_35,10);
-    Group->addButton(ui->pushButton_36,11);
-    Group->addButton(ui->pushButton_37,12);
-    Group->addButton(ui->pushButton_38,13);
-    Group->addButton(ui->pushButton_39,14);
-    Group->addButton(ui->pushButton_40,15);
-    Group->addButton(ui->pushButton_42,16);
-    Group->addButton(ui->pushButton_43,17);
-    Group->addButton(ui->pushButton_44,18);
-    Group->setExclusive(false);
     ui->pushButton_11->setChecked(true);
     myMapper = new QSignalMapper(this);
     QPushButton * button[18]={ui->pushButton_11,ui->pushButton_23,ui->pushButton_24,ui->pushButton_25,ui->pushButton_26,
@@ -47,6 +28,8 @@ MainWindow::MainWindow(QWidget *parent) :
         myMapper->setMapping(button[i], i);
     }
    connect(myMapper, SIGNAL(mapped(int)), this, SLOT(setPushButton(int)));
+   //设置初始qss
+   ui->label_29->setStyleSheet("background-color:#FFFFFF;border-color:#999999;color:#EEEEEE;");
 }
 
 MainWindow::~MainWindow()
@@ -81,63 +64,16 @@ void MainWindow::setPushButton(int index)
     //qDebug()<<"  序号："<<index+2;
     ui->stackedWidget->setCurrentIndex(index);
     ui->stackedWidget_2->setCurrentIndex(index);
+    switch (index) {
+    case 0:
+        ui->spinBox_14->setValue(ui->label_29->height());
+        ui->spinBox_15->setValue(ui->label_29->width());
+        break;
+    default:
+        break;
+    }
 }
 
-
-//void MainWindow::on_pushButton_5_clicked()
-//{
-//    if(iswiedet_1==true)
-//    {
-//        ui->widget_2->setVisible(false);
-//        iswiedet_1=false;
-//        ui->pushButton_5->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
-//        return;
-//    }
-//    ui->widget_2->setVisible(true);
-//    iswiedet_1=true;
-//    ui->pushButton_5->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
-//}
-//void MainWindow::on_pushButton_6_clicked()
-//{
-//    if(iswiedet_2==true)
-//    {
-//        ui->widget_3->setVisible(false);
-//        iswiedet_2=false;
-//        ui->pushButton_6->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
-//        return;
-//    }
-//    ui->widget_3->setVisible(true);
-//    iswiedet_2=true;
-//    ui->pushButton_6->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
-//}
-
-//void MainWindow::on_pushButton_7_clicked()
-//{
-//    if(iswiedet_3==true)
-//    {
-//        ui->widget_4->setVisible(false);
-//        iswiedet_3=false;
-//        ui->pushButton_7->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
-//        return;
-//    }
-//    ui->widget_4->setVisible(true);
-//    iswiedet_3=true;
-//    ui->pushButton_7->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
-//}
-
-//void MainWindow::on_pushButton_8_clicked()
-//{
-//    if(iswiedet_4==true)
-//    {
-//        ui->widget_5->setVisible(false);
-//        iswiedet_4=false;
-//        ui->pushButton_8->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
-//        return;
-//    }
-//    ui->widget_5->setVisible(true);
-//    iswiedet_4=true;
-//    ui->pushButton_8->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
-//}
 
 
 void MainWindow::on_pushButton_12_clicked()
@@ -161,27 +97,27 @@ void MainWindow::on_pushButton_17_clicked()
 void MainWindow::on_pushButton_30_clicked()
 {
     //将代码发送给按钮
-    ui->pushButton_10->setStyleSheet(ui->textEdit->toPlainText());
+    ui->label_29->setStyleSheet(ui->textEdit->toPlainText());
 }
 
 void MainWindow::PrintLogMsg_font(QString msg)
 {
-    ui->lineEdit->setText(msg);
+    ui->lineEdit_70->setText(msg);
     QString str = QString("background:%1;border-radius:4px;").arg(msg);
-    ui->pushButton_10->setStyleSheet(str);
+    ui->pushButton_113->setStyleSheet(str);
 }
 void MainWindow::PrintLogMsg_backgroud(QString msg)
 {
-    ui->lineEdit_2->setText(msg);
+    ui->lineEdit_71->setText(msg);
     QString str = QString("background:%1;border-radius:4px;").arg(msg);
-    ui->pushButton_46->setStyleSheet(str);
+    ui->pushButton_114->setStyleSheet(str);
 }
 
 void MainWindow::PrintLogMsg_border(QString msg)
 {
-    ui->lineEdit_3->setText(msg);
+    ui->lineEdit_69->setText(msg);
     QString str = QString("background:%1;border-radius:4px;").arg(msg);
-    ui->pushButton_47->setStyleSheet(str);
+    ui->pushButton_112->setStyleSheet(str);
 }
 
 void MainWindow::on_pushButton_13_clicked() //字体颜色
@@ -206,43 +142,27 @@ void MainWindow::on_pushButton_15_clicked()//边框颜色
     connect(cp,SIGNAL(GetUdpLogMsg(QString)),this,SLOT(PrintLogMsg_border(QString)));
 }
 
-void MainWindow::on_pushButton_11_clicked()
+
+
+void MainWindow::on_pushButton_114_clicked()
 {
-    ui->spinBox_14->setValue(ui->label_29->height());
-    ui->spinBox_15->setValue(ui->label_29->width());
-    ui->stackedWidget->setCurrentIndex(0);
-    ui->stackedWidget_2->setCurrentIndex(0);
-    //ui->textEdit->setText("#table{\n}");
+    cp = new ColorForm(0,ui->lineEdit_71->text());
+    cp->show();
+    connect(cp,SIGNAL(GetUdpLogMsg(QString)),this,SLOT(PrintLogMsg_backgroud(QString)));
 }
 
-void MainWindow::on_pushButton_23_clicked()
+void MainWindow::on_pushButton_113_clicked()
 {
-    ui->spinBox_14->setValue(ui->pushButton_10->height());
-    ui->spinBox_15->setValue(ui->pushButton_10->width());
-    ui->stackedWidget->setCurrentIndex(1);
-    ui->stackedWidget_2->setCurrentIndex(1);
-}
-
-
-void MainWindow::on_pushButton_45_clicked()
-{
-    cp = new ColorForm(0,ui->lineEdit_7->text());
+    cp = new ColorForm(0,ui->lineEdit_70->text());
     cp->show();
     connect(cp,SIGNAL(GetUdpLogMsg(QString)),this,SLOT(PrintLogMsg_font(QString)));
 }
 
-void MainWindow::on_pushButton_46_clicked()
+void MainWindow::on_pushButton_112_clicked()
 {
-    cp = new ColorForm(0,ui->lineEdit_6->text());
+    cp = new ColorForm(0,ui->lineEdit_69->text());
     cp->show();
-    connect(cp,SIGNAL(GetUdpLogMsg(QString)),this,SLOT(PrintLogMsg_font(QString)));
-}
-
-void MainWindow::on_pushButton_47_clicked()
-{
-    cp = new ColorForm(0,ui->lineEdit_5->text());
-    cp->show();
-    connect(cp,SIGNAL(GetUdpLogMsg(QString)),this,SLOT(PrintLogMsg_font(QString)));
+    connect(cp,SIGNAL(GetUdpLogMsg(QString)),this,SLOT(PrintLogMsg_border(QString)));
 }
 
 void MainWindow::on_spinBox_14_valueChanged(int arg1)
@@ -375,130 +295,132 @@ void MainWindow::on_spinBox_15_valueChanged(int arg1)
     }
 }
 
-void MainWindow::on_pushButton_24_clicked()
+
+//void MainWindow::on_pushButton_5_clicked()
+//{
+//    if(iswiedet_1==true)
+//    {
+//        ui->widget_2->setVisible(false);
+//        iswiedet_1=false;
+//        ui->pushButton_5->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+//        return;
+//    }
+//    ui->widget_2->setVisible(true);
+//    iswiedet_1=true;
+//    ui->pushButton_5->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+//}
+//void MainWindow::on_pushButton_6_clicked()
+//{
+//    if(iswiedet_2==true)
+//    {
+//        ui->widget_3->setVisible(false);
+//        iswiedet_2=false;
+//        ui->pushButton_6->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+//        return;
+//    }
+//    ui->widget_3->setVisible(true);
+//    iswiedet_2=true;
+//    ui->pushButton_6->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+//}
+
+//void MainWindow::on_pushButton_7_clicked()
+//{
+//    if(iswiedet_3==true)
+//    {
+//        ui->widget_4->setVisible(false);
+//        iswiedet_3=false;
+//        ui->pushButton_7->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+//        return;
+//    }
+//    ui->widget_4->setVisible(true);
+//    iswiedet_3=true;
+//    ui->pushButton_7->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+//}
+
+//void MainWindow::on_pushButton_8_clicked()
+//{
+//    if(iswiedet_4==true)
+//    {
+//        ui->widget_5->setVisible(false);
+//        iswiedet_4=false;
+//        ui->pushButton_8->setStyleSheet("border-style:solid;border-image: url(:/lib/hebing.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+//        return;
+//    }
+//    ui->widget_5->setVisible(true);
+//    iswiedet_4=true;
+//    ui->pushButton_8->setStyleSheet("border-style:solid;border-image: url(:/lib/zhankai.png);background-color: rgb(120, 120, 120);color: rgb(219, 219, 219);");
+//}
+
+void MainWindow::on_lineEdit_71_textChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->toolButton_2->height());
-    ui->spinBox_15->setValue(ui->toolButton_2->width());
-    ui->stackedWidget->setCurrentIndex(3);
-    ui->stackedWidget_2->setCurrentIndex(3);
+    ui->textEdit->append(qssstyle::background_color(arg1));
+    ui->label_29->setStyleSheet(qssstyle::background_color(arg1));
 }
 
-void MainWindow::on_pushButton_25_clicked()
+void MainWindow::on_lineEdit_70_textChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->radioButton_2->height());
-    ui->spinBox_15->setValue(ui->radioButton_2->width());
-    ui->stackedWidget->setCurrentIndex(4);
-    ui->stackedWidget_2->setCurrentIndex(4);
+    ui->textEdit->append(qssstyle::fontcolor(arg1));
+    ui->label_29->setStyleSheet(qssstyle::fontcolor(arg1));
 }
 
-void MainWindow::on_pushButton_26_clicked()
+void MainWindow::on_lineEdit_69_textChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->checkBox_2->height());
-    ui->spinBox_15->setValue(ui->checkBox_2->width());
-    ui->stackedWidget->setCurrentIndex(5);
-    ui->stackedWidget_2->setCurrentIndex(5);
+    ui->textEdit->append(qssstyle::border_color(arg1));
+    ui->label_29->setStyleSheet(qssstyle::border_color(arg1));
 }
 
-void MainWindow::on_pushButton_31_clicked()
+void MainWindow::on_fontComboBox_currentIndexChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->buttonBox_2->height());
-    ui->spinBox_15->setValue(ui->buttonBox_2->width());
-    ui->stackedWidget->setCurrentIndex(6);
-    ui->stackedWidget_2->setCurrentIndex(6);
+    ui->textEdit->append(qssstyle::font_size(ui->spinBox_90->text(),arg1));
+    ui->label_29->setStyleSheet(qssstyle::font_size(ui->spinBox_90->text(),arg1));
 }
 
-void MainWindow::on_pushButton_32_clicked()
+void MainWindow::on_spinBox_90_valueChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->horizontalScrollBar_2->height());
-    ui->spinBox_15->setValue(ui->horizontalScrollBar_2->width());
-    ui->stackedWidget->setCurrentIndex(7);
-    ui->stackedWidget_2->setCurrentIndex(7);
+    ui->textEdit->append(qssstyle::font_size(arg1,ui->fontComboBox->currentText()));
+    ui->label_29->setStyleSheet(qssstyle::font_size(arg1,ui->fontComboBox->currentText()));
 }
 
-void MainWindow::on_pushButton_33_clicked()
+
+void MainWindow::on_comboBox_6_currentIndexChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->verticalScrollBar_2->height());
-    ui->spinBox_15->setValue(ui->verticalScrollBar_2->width());
-    ui->stackedWidget->setCurrentIndex(8);
-    ui->stackedWidget_2->setCurrentIndex(8);
+    ui->textEdit->append(qssstyle::text_align(arg1));
+    ui->label_29->setStyleSheet(qssstyle::text_align(arg1));
 }
 
-void MainWindow::on_pushButton_34_clicked()
+void MainWindow::on_comboBox_8_currentIndexChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->horizontalSlider_2->height());
-    ui->spinBox_15->setValue(ui->horizontalSlider_2->width());
-    ui->stackedWidget->setCurrentIndex(9);
-    ui->stackedWidget_2->setCurrentIndex(9);
+    ui->textEdit->append(qssstyle::font_style(arg1));
+    ui->label_29->setStyleSheet(qssstyle::font_style(arg1));
 }
 
-void MainWindow::on_pushButton_35_clicked()
+void MainWindow::on_comboBox_11_currentIndexChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->verticalSlider_2->height());
-    ui->spinBox_15->setValue(ui->verticalSlider_2->width());
-    ui->stackedWidget->setCurrentIndex(10);
-    ui->stackedWidget_2->setCurrentIndex(10);
+    ui->textEdit->append(qssstyle::text_decoration(arg1));
+    ui->label_29->setStyleSheet(qssstyle::text_decoration(arg1));
 }
 
-void MainWindow::on_pushButton_36_clicked()
+
+void MainWindow::on_comboBox_10_currentIndexChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->lineEdit_4->height());
-    ui->spinBox_15->setValue(ui->lineEdit_4->width());
-    ui->stackedWidget->setCurrentIndex(11);
-    ui->stackedWidget_2->setCurrentIndex(11);
+    ui->textEdit->append(qssstyle::font_weight(arg1));
+    ui->label_29->setStyleSheet(qssstyle::font_weight(arg1));
 }
 
-void MainWindow::on_pushButton_37_clicked()
+void MainWindow::on_comboBox_9_currentIndexChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->textEdit_3->height());
-    ui->spinBox_15->setValue(ui->textEdit_3->width());
-    ui->stackedWidget->setCurrentIndex(12);
-    ui->stackedWidget_2->setCurrentIndex(12);
+    ui->textEdit->append(qssstyle::border_style(arg1));
+    ui->label_29->setStyleSheet(qssstyle::border_style(arg1));
 }
 
-void MainWindow::on_pushButton_38_clicked()
+void MainWindow::on_spinBox_13_valueChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->spinBox_16->height());
-    ui->spinBox_15->setValue(ui->spinBox_16->width());
-    ui->stackedWidget->setCurrentIndex(13);
-    ui->stackedWidget_2->setCurrentIndex(13);
+    ui->textEdit->append(qssstyle::border_width(arg1));
+    ui->label_29->setStyleSheet(qssstyle::border_width(arg1));
 }
 
-void MainWindow::on_pushButton_39_clicked()
+void MainWindow::on_spinBox_17_valueChanged(const QString &arg1)
 {
-    ui->spinBox_14->setValue(ui->progressBar_2->height());
-    ui->spinBox_15->setValue(ui->progressBar_2->width());
-    ui->stackedWidget->setCurrentIndex(14);
-    ui->stackedWidget_2->setCurrentIndex(14);
-}
-
-void MainWindow::on_pushButton_40_clicked()
-{
-    ui->spinBox_14->setValue(ui->comboBox_7->height());
-    ui->spinBox_15->setValue(ui->comboBox_7->width());
-    ui->stackedWidget->setCurrentIndex(15);
-    ui->stackedWidget_2->setCurrentIndex(15);
-}
-
-void MainWindow::on_pushButton_42_clicked()
-{
-    ui->spinBox_14->setValue(ui->groupBox->height());
-    ui->spinBox_15->setValue(ui->groupBox->width());
-    ui->stackedWidget->setCurrentIndex(16);
-    ui->stackedWidget_2->setCurrentIndex(16);
-}
-
-void MainWindow::on_pushButton_43_clicked()
-{
-    ui->spinBox_14->setValue(ui->toolBox->height());
-    ui->spinBox_15->setValue(ui->toolBox->width());
-    ui->stackedWidget->setCurrentIndex(17);
-    ui->stackedWidget_2->setCurrentIndex(17);
-}
-
-void MainWindow::on_pushButton_44_clicked()
-{
-    ui->spinBox_14->setValue(ui->tabWidget->height());
-    ui->spinBox_15->setValue(ui->tabWidget->width());
-    ui->stackedWidget->setCurrentIndex(18);
-    ui->stackedWidget_2->setCurrentIndex(18);
+    ui->textEdit->append(qssstyle::border_radius(arg1));
+    ui->label_29->setStyleSheet(qssstyle::border_radius(arg1));
 }

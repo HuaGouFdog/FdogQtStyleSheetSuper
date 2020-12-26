@@ -281,15 +281,15 @@ public:
     QWidget *page_24;
     QGridLayout *gridLayout_13;
     QGridLayout *gridLayout_65;
-    QLineEdit *lineEdit_69;
-    QPushButton *pushButton_112;
     QPushButton *pushButton_113;
-    QLineEdit *lineEdit_70;
+    QPushButton *pushButton_112;
     QLabel *label_221;
-    QLineEdit *lineEdit_71;
     QLabel *label_222;
+    QLineEdit *lineEdit_71;
     QLabel *label_223;
     QPushButton *pushButton_114;
+    QLineEdit *lineEdit_69;
+    QLineEdit *lineEdit_70;
     QGridLayout *gridLayout_2;
     QLabel *label_41;
     QLabel *label_42;
@@ -298,15 +298,17 @@ public:
     QLabel *label_36;
     QFontComboBox *fontComboBox;
     QLabel *label_38;
+    QSpinBox *spinBox_90;
     QLabel *label_8;
-    QComboBox *comboBox_9;
     QComboBox *comboBox_6;
     QLabel *label_39;
     QComboBox *comboBox_8;
+    QLabel *label_40;
+    QLabel *label_43;
+    QLabel *label_37;
+    QComboBox *comboBox_9;
     QComboBox *comboBox_10;
     QComboBox *comboBox_11;
-    QLabel *label_40;
-    QLabel *label_37;
     QSpacerItem *verticalSpacer_2;
     QWidget *page_25;
     QGridLayout *gridLayout_16;
@@ -1078,7 +1080,8 @@ public:
         gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
         label_29 = new QLabel(page);
         label_29->setObjectName(QStringLiteral("label_29"));
-        label_29->setMaximumSize(QSize(120, 15));
+        label_29->setMaximumSize(QSize(120, 26));
+        label_29->setStyleSheet(QStringLiteral(""));
 
         gridLayout_5->addWidget(label_29, 0, 0, 1, 1);
 
@@ -1093,6 +1096,7 @@ public:
         pushButton_10->setObjectName(QStringLiteral("pushButton_10"));
         pushButton_10->setMinimumSize(QSize(0, 33));
         pushButton_10->setMaximumSize(QSize(80, 15));
+        pushButton_10->setStyleSheet(QStringLiteral(""));
 
         gridLayout_6->addWidget(pushButton_10, 0, 0, 1, 1);
 
@@ -1286,7 +1290,7 @@ public:
         toolBox->setObjectName(QStringLiteral("toolBox"));
         page_19 = new QWidget();
         page_19->setObjectName(QStringLiteral("page_19"));
-        page_19->setGeometry(QRect(0, 0, 152, 230));
+        page_19->setGeometry(QRect(0, 0, 152, 140));
         toolBox->addItem(page_19, QStringLiteral("Page 1"));
         page_20 = new QWidget();
         page_20->setObjectName(QStringLiteral("page_20"));
@@ -2187,19 +2191,14 @@ public:
         gridLayout_65 = new QGridLayout();
         gridLayout_65->setSpacing(6);
         gridLayout_65->setObjectName(QStringLiteral("gridLayout_65"));
-        lineEdit_69 = new QLineEdit(page_24);
-        lineEdit_69->setObjectName(QStringLiteral("lineEdit_69"));
-        lineEdit_69->setMinimumSize(QSize(65, 23));
-        lineEdit_69->setMaximumSize(QSize(65, 16777215));
-        lineEdit_69->setFont(font8);
-        lineEdit_69->setStyleSheet(QLatin1String("color: rgb(204, 204, 204);\n"
-"background-color: rgba(255, 255, 255, 0);\n"
-"border-style:solid;\n"
-"border-width:1px;\n"
-"border-color: rgb(204, 204, 204);\n"
-"border-radius:3px;"));
+        pushButton_113 = new QPushButton(page_24);
+        pushButton_113->setObjectName(QStringLiteral("pushButton_113"));
+        pushButton_113->setMinimumSize(QSize(0, 22));
+        pushButton_113->setMaximumSize(QSize(50, 16777215));
+        pushButton_113->setStyleSheet(QLatin1String("background-color: rgb(0, 170, 255);\n"
+"border-radius:4px"));
 
-        gridLayout_65->addWidget(lineEdit_69, 1, 3, 1, 1);
+        gridLayout_65->addWidget(pushButton_113, 2, 2, 1, 1);
 
         pushButton_112 = new QPushButton(page_24);
         pushButton_112->setObjectName(QStringLiteral("pushButton_112"));
@@ -2208,36 +2207,19 @@ public:
         pushButton_112->setStyleSheet(QLatin1String("background-color: rgb(0, 255, 127);\n"
 "border-radius:4px"));
 
-        gridLayout_65->addWidget(pushButton_112, 2, 2, 1, 1);
-
-        pushButton_113 = new QPushButton(page_24);
-        pushButton_113->setObjectName(QStringLiteral("pushButton_113"));
-        pushButton_113->setMinimumSize(QSize(0, 22));
-        pushButton_113->setMaximumSize(QSize(50, 16777215));
-        pushButton_113->setStyleSheet(QLatin1String("background-color: rgb(0, 170, 255);\n"
-"border-radius:4px"));
-
-        gridLayout_65->addWidget(pushButton_113, 1, 2, 1, 1);
-
-        lineEdit_70 = new QLineEdit(page_24);
-        lineEdit_70->setObjectName(QStringLiteral("lineEdit_70"));
-        lineEdit_70->setMinimumSize(QSize(65, 23));
-        lineEdit_70->setMaximumSize(QSize(65, 16777215));
-        lineEdit_70->setFont(font8);
-        lineEdit_70->setStyleSheet(QLatin1String("color: rgb(204, 204, 204);\n"
-"background-color: rgba(255, 255, 255, 0);\n"
-"border-style:solid;\n"
-"border-width:1px;\n"
-"border-color:rgb(204, 204, 204);\n"
-"border-radius:3px;"));
-
-        gridLayout_65->addWidget(lineEdit_70, 2, 3, 1, 1);
+        gridLayout_65->addWidget(pushButton_112, 3, 2, 1, 1);
 
         label_221 = new QLabel(page_24);
         label_221->setObjectName(QStringLiteral("label_221"));
         label_221->setFont(font4);
 
         gridLayout_65->addWidget(label_221, 0, 0, 1, 1);
+
+        label_222 = new QLabel(page_24);
+        label_222->setObjectName(QStringLiteral("label_222"));
+        label_222->setFont(font4);
+
+        gridLayout_65->addWidget(label_222, 3, 0, 1, 1);
 
         lineEdit_71 = new QLineEdit(page_24);
         lineEdit_71->setObjectName(QStringLiteral("lineEdit_71"));
@@ -2253,17 +2235,11 @@ public:
 
         gridLayout_65->addWidget(lineEdit_71, 0, 3, 1, 1);
 
-        label_222 = new QLabel(page_24);
-        label_222->setObjectName(QStringLiteral("label_222"));
-        label_222->setFont(font4);
-
-        gridLayout_65->addWidget(label_222, 2, 0, 1, 1);
-
         label_223 = new QLabel(page_24);
         label_223->setObjectName(QStringLiteral("label_223"));
         label_223->setFont(font4);
 
-        gridLayout_65->addWidget(label_223, 1, 0, 1, 1);
+        gridLayout_65->addWidget(label_223, 2, 0, 1, 1);
 
         pushButton_114 = new QPushButton(page_24);
         pushButton_114->setObjectName(QStringLiteral("pushButton_114"));
@@ -2273,6 +2249,34 @@ public:
 "border-radius:4px"));
 
         gridLayout_65->addWidget(pushButton_114, 0, 2, 1, 1);
+
+        lineEdit_69 = new QLineEdit(page_24);
+        lineEdit_69->setObjectName(QStringLiteral("lineEdit_69"));
+        lineEdit_69->setMinimumSize(QSize(65, 23));
+        lineEdit_69->setMaximumSize(QSize(65, 16777215));
+        lineEdit_69->setFont(font8);
+        lineEdit_69->setStyleSheet(QLatin1String("color: rgb(204, 204, 204);\n"
+"background-color: rgba(255, 255, 255, 0);\n"
+"border-style:solid;\n"
+"border-width:1px;\n"
+"border-color: rgb(204, 204, 204);\n"
+"border-radius:3px;"));
+
+        gridLayout_65->addWidget(lineEdit_69, 3, 3, 1, 1);
+
+        lineEdit_70 = new QLineEdit(page_24);
+        lineEdit_70->setObjectName(QStringLiteral("lineEdit_70"));
+        lineEdit_70->setMinimumSize(QSize(65, 23));
+        lineEdit_70->setMaximumSize(QSize(65, 16777215));
+        lineEdit_70->setFont(font8);
+        lineEdit_70->setStyleSheet(QLatin1String("color: rgb(204, 204, 204);\n"
+"background-color: rgba(255, 255, 255, 0);\n"
+"border-style:solid;\n"
+"border-width:1px;\n"
+"border-color:rgb(204, 204, 204);\n"
+"border-radius:3px;"));
+
+        gridLayout_65->addWidget(lineEdit_70, 2, 3, 1, 1);
 
 
         gridLayout_13->addLayout(gridLayout_65, 0, 0, 1, 1);
@@ -2284,13 +2288,13 @@ public:
         label_41->setObjectName(QStringLiteral("label_41"));
         label_41->setFont(font4);
 
-        gridLayout_2->addWidget(label_41, 9, 0, 1, 1);
+        gridLayout_2->addWidget(label_41, 12, 0, 1, 1);
 
         label_42 = new QLabel(page_24);
         label_42->setObjectName(QStringLiteral("label_42"));
         label_42->setFont(font4);
 
-        gridLayout_2->addWidget(label_42, 10, 0, 1, 1);
+        gridLayout_2->addWidget(label_42, 13, 0, 1, 1);
 
         spinBox_13 = new QSpinBox(page_24);
         spinBox_13->setObjectName(QStringLiteral("spinBox_13"));
@@ -2298,7 +2302,7 @@ public:
         spinBox_13->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
 "color: rgb(0, 0, 0);"));
 
-        gridLayout_2->addWidget(spinBox_13, 9, 1, 1, 1);
+        gridLayout_2->addWidget(spinBox_13, 12, 1, 1, 1);
 
         spinBox_17 = new QSpinBox(page_24);
         spinBox_17->setObjectName(QStringLiteral("spinBox_17"));
@@ -2306,7 +2310,7 @@ public:
         spinBox_17->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
 "color: rgb(0, 0, 0);"));
 
-        gridLayout_2->addWidget(spinBox_17, 10, 1, 1, 1);
+        gridLayout_2->addWidget(spinBox_17, 13, 1, 1, 1);
 
         label_36 = new QLabel(page_24);
         label_36->setObjectName(QStringLiteral("label_36"));
@@ -2325,7 +2329,15 @@ public:
         label_38->setObjectName(QStringLiteral("label_38"));
         label_38->setFont(font4);
 
-        gridLayout_2->addWidget(label_38, 8, 0, 1, 1);
+        gridLayout_2->addWidget(label_38, 10, 0, 1, 1);
+
+        spinBox_90 = new QSpinBox(page_24);
+        spinBox_90->setObjectName(QStringLiteral("spinBox_90"));
+        spinBox_90->setMinimumSize(QSize(107, 23));
+        spinBox_90->setStyleSheet(QStringLiteral(""));
+        spinBox_90->setValue(9);
+
+        gridLayout_2->addWidget(spinBox_90, 1, 1, 1, 1);
 
         label_8 = new QLabel(page_24);
         label_8->setObjectName(QStringLiteral("label_8"));
@@ -2333,24 +2345,6 @@ public:
         label_8->setFont(font4);
 
         gridLayout_2->addWidget(label_8, 0, 0, 1, 1);
-
-        comboBox_9 = new QComboBox(page_24);
-        comboBox_9->addItem(QString());
-        comboBox_9->addItem(QString());
-        comboBox_9->addItem(QString());
-        comboBox_9->addItem(QString());
-        comboBox_9->addItem(QString());
-        comboBox_9->addItem(QString());
-        comboBox_9->addItem(QString());
-        comboBox_9->addItem(QString());
-        comboBox_9->addItem(QString());
-        comboBox_9->addItem(QString());
-        comboBox_9->setObjectName(QStringLiteral("comboBox_9"));
-        comboBox_9->setMinimumSize(QSize(107, 23));
-        comboBox_9->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);"));
-
-        gridLayout_2->addWidget(comboBox_9, 8, 1, 1, 1);
 
         comboBox_6 = new QComboBox(page_24);
         comboBox_6->addItem(QString());
@@ -2374,7 +2368,7 @@ public:
         label_39->setObjectName(QStringLiteral("label_39"));
         label_39->setFont(font4);
 
-        gridLayout_2->addWidget(label_39, 7, 0, 1, 1);
+        gridLayout_2->addWidget(label_39, 8, 0, 1, 1);
 
         comboBox_8 = new QComboBox(page_24);
         comboBox_8->addItem(QString());
@@ -2387,6 +2381,42 @@ public:
 
         gridLayout_2->addWidget(comboBox_8, 5, 1, 1, 1);
 
+        label_40 = new QLabel(page_24);
+        label_40->setObjectName(QStringLiteral("label_40"));
+        label_40->setFont(font4);
+
+        gridLayout_2->addWidget(label_40, 6, 0, 1, 1);
+
+        label_43 = new QLabel(page_24);
+        label_43->setObjectName(QStringLiteral("label_43"));
+        label_43->setFont(font4);
+
+        gridLayout_2->addWidget(label_43, 1, 0, 1, 1);
+
+        label_37 = new QLabel(page_24);
+        label_37->setObjectName(QStringLiteral("label_37"));
+        label_37->setFont(font4);
+
+        gridLayout_2->addWidget(label_37, 5, 0, 1, 1);
+
+        comboBox_9 = new QComboBox(page_24);
+        comboBox_9->addItem(QString());
+        comboBox_9->addItem(QString());
+        comboBox_9->addItem(QString());
+        comboBox_9->addItem(QString());
+        comboBox_9->addItem(QString());
+        comboBox_9->addItem(QString());
+        comboBox_9->addItem(QString());
+        comboBox_9->addItem(QString());
+        comboBox_9->addItem(QString());
+        comboBox_9->addItem(QString());
+        comboBox_9->setObjectName(QStringLiteral("comboBox_9"));
+        comboBox_9->setMinimumSize(QSize(107, 23));
+        comboBox_9->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);"));
+
+        gridLayout_2->addWidget(comboBox_9, 10, 1, 1, 1);
+
         comboBox_10 = new QComboBox(page_24);
         comboBox_10->addItem(QString());
         comboBox_10->addItem(QString());
@@ -2396,7 +2426,7 @@ public:
         comboBox_10->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
 "color: rgb(0, 0, 0);"));
 
-        gridLayout_2->addWidget(comboBox_10, 7, 1, 1, 1);
+        gridLayout_2->addWidget(comboBox_10, 6, 1, 1, 1);
 
         comboBox_11 = new QComboBox(page_24);
         comboBox_11->addItem(QString());
@@ -2408,19 +2438,7 @@ public:
         comboBox_11->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
 "color: rgb(0, 0, 0);"));
 
-        gridLayout_2->addWidget(comboBox_11, 6, 1, 1, 1);
-
-        label_40 = new QLabel(page_24);
-        label_40->setObjectName(QStringLiteral("label_40"));
-        label_40->setFont(font4);
-
-        gridLayout_2->addWidget(label_40, 6, 0, 1, 1);
-
-        label_37 = new QLabel(page_24);
-        label_37->setObjectName(QStringLiteral("label_37"));
-        label_37->setFont(font4);
-
-        gridLayout_2->addWidget(label_37, 5, 0, 1, 1);
+        gridLayout_2->addWidget(comboBox_11, 8, 1, 1, 1);
 
 
         gridLayout_13->addLayout(gridLayout_2, 1, 0, 1, 1);
@@ -5808,10 +5826,10 @@ public:
         QObject::connect(pushButton_3, SIGNAL(clicked()), MainWindow, SLOT(close()));
         QObject::connect(pushButton_4, SIGNAL(clicked()), MainWindow, SLOT(showFullScreen()));
 
-        stackedWidget->setCurrentIndex(5);
-        toolBox->setCurrentIndex(1);
-        tabWidget->setCurrentIndex(0);
-        stackedWidget_2->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
+        toolBox->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
+        stackedWidget_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -5996,31 +6014,20 @@ public:
 
         label_108->setText(QApplication::translate("MainWindow", "\346\226\207\345\255\227\345\244\247\345\260\217", nullptr));
         label_27->setText(QApplication::translate("MainWindow", "\345\261\236\346\200\247", nullptr));
-        lineEdit_69->setText(QApplication::translate("MainWindow", "#999999", nullptr));
-        pushButton_112->setText(QString());
         pushButton_113->setText(QString());
-        lineEdit_70->setText(QApplication::translate("MainWindow", "#EEEEEE", nullptr));
+        pushButton_112->setText(QString());
         label_221->setText(QApplication::translate("MainWindow", "\350\203\214\346\231\257\351\242\234\350\211\262", nullptr));
-        lineEdit_71->setText(QApplication::translate("MainWindow", "#FFFFFF", nullptr));
         label_222->setText(QApplication::translate("MainWindow", "\350\276\271\346\241\206\351\242\234\350\211\262", nullptr));
+        lineEdit_71->setText(QApplication::translate("MainWindow", "#FFFFFF", nullptr));
         label_223->setText(QApplication::translate("MainWindow", "\345\255\227\344\275\223\351\242\234\350\211\262", nullptr));
         pushButton_114->setText(QString());
+        lineEdit_69->setText(QApplication::translate("MainWindow", "#999999", nullptr));
+        lineEdit_70->setText(QApplication::translate("MainWindow", "#EEEEEE", nullptr));
         label_41->setText(QApplication::translate("MainWindow", "\350\276\271\346\241\206\345\244\247\345\260\217", nullptr));
         label_42->setText(QApplication::translate("MainWindow", "\345\234\206\350\247\222\345\244\247\345\260\217", nullptr));
         label_36->setText(QApplication::translate("MainWindow", "\346\226\207\345\255\227\345\257\271\351\275\220", nullptr));
         label_38->setText(QApplication::translate("MainWindow", "\350\276\271\346\241\206\351\243\216\346\240\274", nullptr));
         label_8->setText(QApplication::translate("MainWindow", "\346\226\207\345\255\227\345\255\227\344\275\223", nullptr));
-        comboBox_9->setItemText(0, QApplication::translate("MainWindow", "none", nullptr));
-        comboBox_9->setItemText(1, QApplication::translate("MainWindow", "solid", nullptr));
-        comboBox_9->setItemText(2, QApplication::translate("MainWindow", "dotted", nullptr));
-        comboBox_9->setItemText(3, QApplication::translate("MainWindow", "dashed", nullptr));
-        comboBox_9->setItemText(4, QApplication::translate("MainWindow", "double", nullptr));
-        comboBox_9->setItemText(5, QApplication::translate("MainWindow", "groove", nullptr));
-        comboBox_9->setItemText(6, QApplication::translate("MainWindow", "ridge", nullptr));
-        comboBox_9->setItemText(7, QApplication::translate("MainWindow", "inset", nullptr));
-        comboBox_9->setItemText(8, QApplication::translate("MainWindow", "outset", nullptr));
-        comboBox_9->setItemText(9, QApplication::translate("MainWindow", "inherit", nullptr));
-
         comboBox_6->setItemText(0, QApplication::translate("MainWindow", "\345\267\246\344\270\212\345\257\271\351\275\220", nullptr));
         comboBox_6->setItemText(1, QApplication::translate("MainWindow", "\345\267\246\344\270\213\345\257\271\351\275\220", nullptr));
         comboBox_6->setItemText(2, QApplication::translate("MainWindow", "\345\267\246\345\257\271\351\275\220", nullptr));
@@ -6036,6 +6043,20 @@ public:
         comboBox_8->setItemText(1, QApplication::translate("MainWindow", "oblique", nullptr));
         comboBox_8->setItemText(2, QApplication::translate("MainWindow", "italic", nullptr));
 
+        label_40->setText(QApplication::translate("MainWindow", "\346\226\207\345\255\227\347\262\227\347\273\206", nullptr));
+        label_43->setText(QApplication::translate("MainWindow", "\346\226\207\345\255\227\345\244\247\345\260\217", nullptr));
+        label_37->setText(QApplication::translate("MainWindow", "\346\226\207\345\255\227\346\240\267\345\274\217", nullptr));
+        comboBox_9->setItemText(0, QApplication::translate("MainWindow", "none", nullptr));
+        comboBox_9->setItemText(1, QApplication::translate("MainWindow", "solid", nullptr));
+        comboBox_9->setItemText(2, QApplication::translate("MainWindow", "dotted", nullptr));
+        comboBox_9->setItemText(3, QApplication::translate("MainWindow", "dashed", nullptr));
+        comboBox_9->setItemText(4, QApplication::translate("MainWindow", "double", nullptr));
+        comboBox_9->setItemText(5, QApplication::translate("MainWindow", "groove", nullptr));
+        comboBox_9->setItemText(6, QApplication::translate("MainWindow", "ridge", nullptr));
+        comboBox_9->setItemText(7, QApplication::translate("MainWindow", "inset", nullptr));
+        comboBox_9->setItemText(8, QApplication::translate("MainWindow", "outset", nullptr));
+        comboBox_9->setItemText(9, QApplication::translate("MainWindow", "inherit", nullptr));
+
         comboBox_10->setItemText(0, QApplication::translate("MainWindow", "normal", nullptr));
         comboBox_10->setItemText(1, QApplication::translate("MainWindow", "bold", nullptr));
         comboBox_10->setItemText(2, QApplication::translate("MainWindow", "lighter", nullptr));
@@ -6045,8 +6066,6 @@ public:
         comboBox_11->setItemText(2, QApplication::translate("MainWindow", "overline", nullptr));
         comboBox_11->setItemText(3, QApplication::translate("MainWindow", "line-through", nullptr));
 
-        label_40->setText(QApplication::translate("MainWindow", "\346\226\207\345\255\227\347\262\227\347\273\206", nullptr));
-        label_37->setText(QApplication::translate("MainWindow", "\346\226\207\345\255\227\346\240\267\345\274\217", nullptr));
         lineEdit_72->setText(QApplication::translate("MainWindow", "#999999", nullptr));
         pushButton_115->setText(QString());
         pushButton_116->setText(QString());

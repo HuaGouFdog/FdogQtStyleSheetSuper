@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    colorform.cpp
+    colorform.cpp \
+    qssstyle.cpp
 
 HEADERS += \
         mainwindow.h \
-    colorform.h
+    colorform.h \
+    qssstyle.h
 
 FORMS += \
         mainwindow.ui \
